@@ -19,13 +19,13 @@ Public Class FormRubro
         Dim strComando As String = "rubroLlenarTabla"
 
 
-        Dim sqlComando As New SqlCommand("rubroLlenarTabla", conex.sqlconexion)
+        Dim objComando As New SqlCommand("rubroLlenarTabla", objConexion)
 
 
-        sqlComando.CommandType = CommandType.StoredProcedure
-        conex.abrir()
+        objComando.CommandType = CommandType.StoredProcedure
 
-        Dim sqlAdapter As New SqlDataAdapter(sqlComando)
+
+        Dim sqlAdapter As New SqlDataAdapter(objComando)
         Dim sqlDataTable As New DataTable
 
         sqlAdapter.Fill(sqlDataTable)
@@ -33,7 +33,7 @@ Public Class FormRubro
 
         tabla.Columns("nombreRubro").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        conex.cerrar()
+
 
     End Sub
 

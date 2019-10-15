@@ -2,9 +2,9 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Public Class UsuariosClass
-
+    Inherits Conexion
     Dim NyA_, TdeUsuario_ As String
-    Dim Id_Usuario_, Password_, Direccion_, Tel_ As Integer
+    Dim Id_Usuario_, Contraseña_, Direccion_, Tel_ As Integer
     Dim FdeN_ As Date
 
 
@@ -28,12 +28,12 @@ Public Class UsuariosClass
     End Property
 
 
-    Public Property Password() As Integer
+    Public Property Contraseña() As Integer
         Get
-            Return Password_
+            Return Contraseña_
         End Get
         Set(ByVal value As Integer)
-            Password_ = value
+            Contraseña_ = value
         End Set
     End Property
 
@@ -76,64 +76,66 @@ Public Class UsuariosClass
     End Property
 
 
-
     Public Sub Agregar(ByVal Usuario As UsuariosClass)
 
-        Dim conex As New Conexion
+        Try
+            Abrir()
 
-        Dim sqlComando As New SqlCommand("UsuariosAgregar", conex.sqlconexion)
+            Dim objComando As New SqlCommand("UsuariosAgregar", objConexion)
 
-        conex.abrir()
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@NyA", Usuario.NyA)
+            objComando.Parameters.AddWithValue("@Contraseña", Usuario.Contraseña)
+            objComando.Parameters.AddWithValue("@TdeUsuario", Usuario.TdeUsuario)
+            objComando.Parameters.AddWithValue("@FdeN", Usuario.FdeN)
+            objComando.Parameters.AddWithValue("@Direccion", Usuario.Direccion)
+            objComando.Parameters.AddWithValue("@Tel", Usuario.Tel)
 
-        sqlComando.CommandType = CommandType.StoredProcedure
-
-
-        sqlComando.Parameters.AddWithValue("@NyA", Usuario.NyA)
-        sqlComando.Parameters.AddWithValue("@Password", Usuario.Password)
-        sqlComando.Parameters.AddWithValue("@TdeUsuario", Usuario.TdeUsuario)
-        sqlComando.Parameters.AddWithValue("@FdeN", Usuario.FdeN)
-        sqlComando.Parameters.AddWithValue("@Direccion", Usuario.Direccion)
-        sqlComando.Parameters.AddWithValue("@Tel", Usuario.Tel)
-
-        sqlComando.ExecuteNonQuery()
-        conex.cerrar()
+            objComando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
 
     End Sub
 
     Public Sub Modificar(ByVal Usuario As UsuariosClass)
 
-        Dim conex As New Conexion
+        Try
+            Abrir()
 
-        Dim sqlComando As New SqlCommand("UsuariosModificar", conex.sqlconexion)
-        conex.abrir()
+            Dim objComando As New SqlCommand("UsuariosModificar", objConexion)
 
-        sqlComando.CommandType = CommandType.StoredProcedure
+            objComando.CommandType = CommandType.StoredProcedure
 
-        sqlComando.Parameters.AddWithValue("@Id_Usuario", Usuario.Id_Usuario)
-        sqlComando.Parameters.AddWithValue("@NyA", Usuario.NyA)
-        sqlComando.Parameters.AddWithValue("@Password", Usuario.Password)
-        sqlComando.Parameters.AddWithValue("@TdeUsuario", Usuario.TdeUsuario)
-        sqlComando.Parameters.AddWithValue("@FdeN", Usuario.FdeN)
-        sqlComando.Parameters.AddWithValue("@Direccion", Usuario.Direccion)
-        sqlComando.Parameters.AddWithValue("@Tel", Usuario.Tel)
+            objComando.Parameters.AddWithValue("@Id_Usuario", Usuario.Id_Usuario)
+            objComando.Parameters.AddWithValue("@NyA", Usuario.NyA)
+            objComando.Parameters.AddWithValue("@Contraseña", Usuario.Contraseña)
+            objComando.Parameters.AddWithValue("@TdeUsuario", Usuario.TdeUsuario)
+            objComando.Parameters.AddWithValue("@FdeN", Usuario.FdeN)
+            objComando.Parameters.AddWithValue("@Direccion", Usuario.Direccion)
+            objComando.Parameters.AddWithValue("@Tel", Usuario.Tel)
 
-        sqlComando.ExecuteNonQuery()
+            objComando.ExecuteNonQuery()
 
-
-        conex.cerrar()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
 
     End Sub
 
 
     Public Sub Eliminar(ByVal Id_Usuario As Integer)
 
-        Dim conex As New Conexion
-        conex.abrir()
-
-        Dim sqlComando As New SqlCommand("UsuariosEliminar", conex.sqlconexion)
-        sqlComando.CommandType = CommandType.StoredProcedure
-        sqlComando.Parameters.AddWithValue("@Id_Usuario", Id_Usuario)
         Try
+
+            Dim sqlComando As New SqlCommand("UsuariosEliminar", objConexion)
+            sqlComando.CommandType = CommandType.StoredProcedure
+            sqlComando.Parameters.AddWithValue("@Id_Usuario", Id_Usuario)
+
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox("NO SE PUEDE ELIMINAR EL REGISTRO...!")

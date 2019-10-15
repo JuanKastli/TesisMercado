@@ -123,7 +123,6 @@
       <DependentUpon>FormProductos.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProductos.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormProductosDetalle.Designer.vb">
       <DependentUpon>FormProductosDetalle.vb</DependentUpon>
@@ -135,7 +134,6 @@
       <DependentUpon>FormProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProveedores.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormProveedoresDetalle.Designer.vb">
       <DependentUpon>FormProveedoresDetalle.vb</DependentUpon>

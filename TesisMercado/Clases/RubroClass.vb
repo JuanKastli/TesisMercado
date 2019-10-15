@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 
 Public Class RubroClass
-
+    Inherits Conexion
     Dim id_ As Integer
     Dim nombreRubro_ As String
 
@@ -26,55 +26,60 @@ Public Class RubroClass
 
 
     Public Sub Agregar(ByVal Rubro As RubroClass)
-
-        Dim conex As New Conexion
-
-        Dim sqlComando As New SqlCommand("rubroAgregar", conex.sqlconexion)
-
-        conex.abrir()
-
-        sqlComando.CommandType = CommandType.StoredProcedure
-
-        'sqlComando.Parameters.AddWithValue("@id", Rubro.id)
-        sqlComando.Parameters.AddWithValue("@nombreRubro", Rubro.nombreRubro)
-        
-
-        sqlComando.ExecuteNonQuery()
+        Try
+            Abrir()
 
 
-        conex.cerrar()
+            Dim objComando As New SqlCommand("rubroAgregar", objConexion)
+
+            objComando.CommandType = CommandType.StoredProcedure
+
+            'sqlComando.Parameters.AddWithValue("@id", Rubro.id)
+            objComando.Parameters.AddWithValue("@nombreRubro", Rubro.nombreRubro)
+
+
+            objComando.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
 
     End Sub
 
     Public Sub Modificar(ByVal Rubro As RubroClass)
+        Try
+            Abrir()
 
-        Dim conex As New Conexion
-
-        Dim sqlComando As New SqlCommand("rubroModificar", conex.sqlconexion)
-        conex.abrir()
-
-        sqlComando.CommandType = CommandType.StoredProcedure
-
-        sqlComando.Parameters.AddWithValue("@id", Rubro.id)
-        sqlComando.Parameters.AddWithValue("@nombreRubro", Rubro.nombreRubro)
+            Dim objComando As New SqlCommand("rubroModificar", objConexion)
 
 
-        sqlComando.ExecuteNonQuery()
+            objComando.CommandType = CommandType.StoredProcedure
+
+            objComando.Parameters.AddWithValue("@id", Rubro.id)
+            objComando.Parameters.AddWithValue("@nombreRubro", Rubro.nombreRubro)
 
 
-        conex.cerrar()
+            objComando.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
 
     End Sub
 
     Public Sub Eliminar(ByVal id As String)
 
-        Dim conex As New Conexion
-        conex.abrir()
-
-        Dim sqlComando As New SqlCommand("rubroEliminar", conex.sqlconexion)
-        sqlComando.CommandType = CommandType.StoredProcedure
-        sqlComando.Parameters.AddWithValue("@id", id)
         Try
+            Abrir()
+
+            Dim sqlComando As New SqlCommand("rubroEliminar", objConexion)
+            sqlComando.CommandType = CommandType.StoredProcedure
+            sqlComando.Parameters.AddWithValue("@id", id)
+
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox("NO SE PUEDE ELIMINAR EL REGISTRO...!")

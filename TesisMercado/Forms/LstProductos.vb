@@ -4,12 +4,8 @@ Public Class LstProductos
 
     Dim producto As New productosClass
 
-
     Private Sub LstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
         producto.ConsultarProducto(dgvProductos)
-
-     
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click

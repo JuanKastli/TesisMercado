@@ -43,7 +43,7 @@ Public Class FormUsuariosDetalle
 
         usu.Id_Usuario = Nothing
         usu.NyA = Nothing
-        usu.Password = Nothing
+        usu.Contraseña = Nothing
         usu.TdeUsuario = Nothing
         usu.FdeN = Nothing
         usu.Direccion = Nothing
@@ -72,7 +72,7 @@ Public Class FormUsuariosDetalle
 
             usu.Id_Usuario = txtIdUsuario.Text
             usu.NyA = txtNyA.Text
-            usu.Password = txtPassword.Text
+            usu.Contraseña = txtPassword.Text
             usu.TdeUsuario = ComboBox1.Text
             usu.Direccion = txtDireccion.Text
             usu.Tel = txtTelefono.Text

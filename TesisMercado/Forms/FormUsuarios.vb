@@ -16,7 +16,7 @@ Public Class FormUsuarios
 
 
         sqlComando.CommandType = CommandType.StoredProcedure
-        conex.abrir()
+
 
         Dim sqlAdapter As New SqlDataAdapter(sqlComando)
         Dim sqlDataTable As New DataTable
@@ -26,7 +26,7 @@ Public Class FormUsuarios
 
         'tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        conex.cerrar()
+
 
     End Sub
 

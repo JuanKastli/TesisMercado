@@ -19,11 +19,11 @@ Public Class FormClientes
         Dim strComando As String = "clientesLlenarTabla"
 
 
-        Dim sqlComando As New SqlCommand("clientesLlenarTabla", conex.sqlconexion)
+        Dim sqlComando As New SqlCommand("clientesLlenarTabla", objConexion)
 
 
         sqlComando.CommandType = CommandType.StoredProcedure
-        conex.abrir()
+
 
         Dim sqlAdapter As New SqlDataAdapter(sqlComando)
         Dim sqlDataTable As New DataTable
@@ -33,7 +33,7 @@ Public Class FormClientes
 
         tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        conex.cerrar()
+
 
     End Sub
 

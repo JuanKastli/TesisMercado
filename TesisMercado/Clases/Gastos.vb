@@ -2,6 +2,7 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Public Class Gastos
+    Inherits Conexion
     Dim Id_, Nfactura_ As Integer
     Dim Monto_ As Decimal
     Dim Fecha_ As Date
@@ -26,7 +27,7 @@ Public Class Gastos
             Nfactura_ = value
         End Set
     End Property
-   
+
     Public Property Monto() As Decimal
         Get
             Return Monto_
@@ -67,21 +68,24 @@ Public Class Gastos
 
     Public Sub Agregar(ByVal gasto As Gastos)
 
-        Dim conex As New Conexion
+        Try
+            Abrir()
 
-        Dim sqlComando As New SqlCommand("GastosAgregar", conex.sqlconexion)
+            Dim objComando As New SqlCommand("GastosAgregar", objConexion)
 
-        conex.abrir()
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@fecha", gasto.Fecha)
+            objComando.Parameters.AddWithValue("@Nro_factura", gasto.Nfactura)
+            objComando.Parameters.AddWithValue("@descripcion", gasto.Descripcion)
+            objComando.Parameters.AddWithValue("@monto", gasto.Monto)
 
-        sqlComando.CommandType = CommandType.StoredProcedure
-        sqlComando.Parameters.AddWithValue("@fecha", gasto.Fecha)
-        sqlComando.Parameters.AddWithValue("@Nro_factura", gasto.Nfactura)
-        sqlComando.Parameters.AddWithValue("@descripcion", gasto.descripcion)
-        sqlComando.Parameters.AddWithValue("@monto", gasto.Monto)
+            objComando.ExecuteNonQuery()
 
-        sqlComando.ExecuteNonQuery()
-        conex.cerrar()
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
     End Sub
 
 End Class

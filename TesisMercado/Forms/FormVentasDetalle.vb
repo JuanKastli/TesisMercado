@@ -20,11 +20,11 @@ Public Class FormVentasDetalle
         Dim strComando As String = "VentasLlenarTabla"
 
 
-        Dim sqlComando As New SqlCommand("VentasLlenarTabla", conex.sqlconexion)
+        Dim sqlComando As New SqlCommand("VentasLlenarTabla", objConexion)
 
 
         sqlComando.CommandType = CommandType.StoredProcedure
-        conex.abrir()
+
 
         Dim sqlAdapter As New SqlDataAdapter(sqlComando)
         Dim sqlDataTable As New DataTable
@@ -34,7 +34,7 @@ Public Class FormVentasDetalle
 
         'tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        conex.cerrar()
+
 
     End Sub
 

@@ -1,12 +1,13 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class FormGastos
-    Dim conex As New Conexion
 
-    'Private Sub FormServicios_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-    '    LlenarTabla(DataGridView1)
-    'End Sub
     Dim gasto As New Gastos
+
+    Private Sub FormGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        LlenarTabla(DataGridView1)
+    End Sub
+
 
     Private Sub LlenarTabla(ByVal tabla As DataGridView)
 
@@ -14,11 +15,11 @@ Public Class FormGastos
         Dim strComando As String = "gastosLlenarTabla"
 
 
-        Dim sqlComando As New SqlCommand("gastosLlenarTabla", conex.sqlconexion)
+        Dim sqlComando As New SqlCommand("gastosLlenarTabla", objConexion)
 
 
         sqlComando.CommandType = CommandType.StoredProcedure
-        conex.abrir()
+
 
         Dim sqlAdapter As New SqlDataAdapter(sqlComando)
         Dim sqlDataTable As New DataTable
@@ -28,13 +29,11 @@ Public Class FormGastos
 
         ' tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        conex.cerrar()
+
 
     End Sub
 
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-
 
 
     End Sub
@@ -50,7 +49,5 @@ Public Class FormGastos
 
     End Sub
 
-    Private Sub FormGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        LlenarTabla(DataGridView1)
-    End Sub
+
 End Class

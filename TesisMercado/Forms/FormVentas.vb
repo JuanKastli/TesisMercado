@@ -75,13 +75,13 @@ Public Class FormVentas
 
 
 
-        Dim FormLstProductos As New FormLstProductos
+        Dim LstProductos As New LstProductos
 
-        FormLstProductos.ShowDialog()
+        LstProductos.ShowDialog()
 
 
-        txtIdProducto.Text = FormLstProductos.producto.Id
-        txtDescripcion.Text = FormLstProductos.producto.nombre
+        txtIdProducto.Text = LstProductos.producto.Id
+        txtDescripcion.Text = LstProductos.producto.nombre
 
 
     End Sub

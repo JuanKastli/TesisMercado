@@ -2,6 +2,7 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Public Class ClientesClass
+    Inherits Conexion
     Dim Id_, telefono_ As Integer
     Dim nombre_, apellido_, direccion_ As String
 
@@ -79,36 +80,41 @@ Public Class ClientesClass
 
     Public Sub Modificar(ByVal clientes As ClientesClass)
 
-        Dim conex As New Conexion
+        Try
+            Abrir()
 
-        Dim sqlComando As New SqlCommand("clientesModificar", conex.sqlconexion)
-        conex.abrir()
-
-        sqlComando.CommandType = CommandType.StoredProcedure
-
-        sqlComando.Parameters.AddWithValue("@Id", clientes.Id)
-        sqlComando.Parameters.AddWithValue("@nombre", clientes.nombre)
-        sqlComando.Parameters.AddWithValue("@apellido", clientes.apellido)
-        sqlComando.Parameters.AddWithValue("@direccion", clientes.direccion)
-        sqlComando.Parameters.AddWithValue("@telefono", clientes.telefono)
-
-        sqlComando.ExecuteNonQuery()
+            Dim objComando As New SqlCommand("clientesModificar", objConexion)
 
 
-        conex.cerrar()
+            objComando.CommandType = CommandType.StoredProcedure
+
+            objComando.Parameters.AddWithValue("@Id", clientes.Id)
+            objComando.Parameters.AddWithValue("@nombre", clientes.nombre)
+            objComando.Parameters.AddWithValue("@apellido", clientes.apellido)
+            objComando.Parameters.AddWithValue("@direccion", clientes.direccion)
+            objComando.Parameters.AddWithValue("@telefono", clientes.telefono)
+
+            objComando.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
+        End Try
 
     End Sub
 
 
     Public Sub Eliminar(ByVal au_id As String)
 
-        Dim conex As New Conexion
-        conex.abrir()
-
-        Dim sqlComando As New SqlCommand("clientesEliminar", conex.sqlconexion)
-        sqlComando.CommandType = CommandType.StoredProcedure
-        sqlComando.Parameters.AddWithValue("@Id", Id)
         Try
+            Abrir()
+
+            Dim sqlComando As New SqlCommand("clientesEliminar", objConexion)
+            sqlComando.CommandType = CommandType.StoredProcedure
+            sqlComando.Parameters.AddWithValue("@Id", Id)
+
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox("NO SE PUEDE ELIMINAR EL REGISTRO...!")
