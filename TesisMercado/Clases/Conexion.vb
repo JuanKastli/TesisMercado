@@ -66,7 +66,7 @@ Public Class Conexion
 
     Protected Function Abrir()
         Try
-            servidor_ = "JUAN-PC"
+            servidor_ = "DESKTOP-O022KNB"
             baseDatos_ = "mercadosantaritaSQL"
             usuario_ = ""
             password_ = ""
