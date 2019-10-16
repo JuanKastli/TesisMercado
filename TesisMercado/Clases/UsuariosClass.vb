@@ -75,6 +75,30 @@ Public Class UsuariosClass
         End Set
     End Property
 
+    Public Sub UsuariosLlenarTabla(ByVal listado As DataGridView)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("UsuariosLlenarTabla", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    listado.DataSource = objDataTable
+                    listado.Columns("id").Width = 50
+
+                Else
+                    listado.DataSource = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
 
     Public Sub Agregar(ByVal Usuario As UsuariosClass)
 

@@ -4,45 +4,18 @@ Imports System.Data.SqlClient
 Public Class FormRubro
 
     Dim Rubro As New RubroClass
-    Dim conex As New Conexion
 
     Private Sub FormRubro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        LlenarTabla(DataGridView1)
+        Rubro.rubroLlenarTabla(DataGridView1)
 
     End Sub
-
-
-    Private Sub LlenarTabla(ByVal tabla As DataGridView)
-
-
-        Dim strComando As String = "rubroLlenarTabla"
-
-
-        Dim objComando As New SqlCommand("rubroLlenarTabla", objConexion)
-
-
-        objComando.CommandType = CommandType.StoredProcedure
-
-
-        Dim sqlAdapter As New SqlDataAdapter(objComando)
-        Dim sqlDataTable As New DataTable
-
-        sqlAdapter.Fill(sqlDataTable)
-        tabla.DataSource = sqlDataTable
-
-        tabla.Columns("nombreRubro").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
-
-
-    End Sub
-
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         Dim FormRubroDetalle As New FormRubroDetalle
 
         FormRubroDetalle.ShowDialog()
-        LlenarTabla(DataGridView1)
+        Rubro.rubroLlenarTabla(DataGridView1)
 
     End Sub
 
@@ -57,7 +30,7 @@ Public Class FormRubro
 
         Dim FormRubroDetalle As New FormRubroDetalle(Rubro)
         FormRubroDetalle.ShowDialog()
-        LlenarTabla(DataGridView1)
+        Rubro.rubroLlenarTabla(DataGridView1)
 
 
     End Sub
@@ -70,7 +43,7 @@ Public Class FormRubro
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             Rubro.Eliminar(Rubro.id)
-            LlenarTabla(DataGridView1)
+            Rubro.rubroLlenarTabla(DataGridView1)
 
         End If
 

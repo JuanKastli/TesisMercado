@@ -301,17 +301,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="imagenes\fondo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="imagenes\40997wide.jpg" />
-    <Content Include="imagenes\fondoMenu.png" />
-    <Content Include="imagenes\Sin nombre.png" />
-    <None Include="Resources\orig_367079.jpg" />
-    <None Include="Resources\orig_60400.jpg" />
-    <None Include="Resources\40997wide.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

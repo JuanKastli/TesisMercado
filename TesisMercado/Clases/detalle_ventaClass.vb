@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class detalle_ventaClass
 
+    Inherits Conexion
     Dim Id_, id_producto_, id_venta_, cantidad_, monto_ As Integer
     Dim fecha_ As DateTime
     Dim tipo_ As String
@@ -66,5 +67,29 @@ Public Class detalle_ventaClass
         End Set
     End Property
 
+    Public Sub VentaLlenarTabla(ByVal listado As DataGridView)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("VentaLlenarTabla", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    listado.DataSource = objDataTable
+                    listado.Columns("id").Width = 50
+
+                Else
+                    listado.DataSource = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
 
 End Class

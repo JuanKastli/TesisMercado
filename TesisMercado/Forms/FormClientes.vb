@@ -5,35 +5,10 @@ Imports System.Data.SqlClient
 Public Class FormClientes
 
     Dim Clientes As New ClientesClass
-    Dim conex As New Conexion
 
     Private Sub FormClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        LlenarTabla(DataGridView1)
-
-    End Sub
-
-    Private Sub LlenarTabla(ByVal tabla As DataGridView)
-
-
-        Dim strComando As String = "clientesLlenarTabla"
-
-
-        Dim sqlComando As New SqlCommand("clientesLlenarTabla", objConexion)
-
-
-        sqlComando.CommandType = CommandType.StoredProcedure
-
-
-        Dim sqlAdapter As New SqlDataAdapter(sqlComando)
-        Dim sqlDataTable As New DataTable
-
-        sqlAdapter.Fill(sqlDataTable)
-        tabla.DataSource = sqlDataTable
-
-        tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
-
+        'Clientes.ClientesLlenarTabla(DataGridView1)
 
     End Sub
 
@@ -43,7 +18,7 @@ Public Class FormClientes
         Dim FormClientesDetalle As New FormClientesDetalle
 
         FormClientesDetalle.ShowDialog()
-        LlenarTabla(DataGridView1)
+        'ClientesLlenarTabla(DataGridView1)
 
     End Sub
 
@@ -57,7 +32,7 @@ Public Class FormClientes
 
         Dim FormClientesDetalle As New FormClientesDetalle(clientes)
         FormClientesDetalle.ShowDialog()
-        LlenarTabla(DataGridView1)
+        'ClientesLlenarTabla(DataGridView1)
 
     End Sub
 
@@ -69,7 +44,7 @@ Public Class FormClientes
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             Clientes.Eliminar(Clientes.Id)
-            LlenarTabla(DataGridView1)
+            'ClientesLlenarTabla(DataGridView1)
 
         End If
 

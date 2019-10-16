@@ -6,7 +6,6 @@ Public Class FormVentas
     Dim Venta As New ventaClass
     Private comprobante As New FacturacionClass
     Private pro As New productosClass
-    Dim conex As New Conexion
     Private vent_ As ventaClass
     Private esNuevo_ As Boolean
 
@@ -30,26 +29,6 @@ Public Class FormVentas
         End Set
     End Property
 
-
-    'constructor para agregar
-
-    'Public Sub New()
-    '    InitializeComponent()
-
-    '    Dim ventaPro As New productosClass
-
-    '    ventaPro.Id = ""
-    '    ventaPro.nombre = ""
-    '    ventaPro.cantidad = ""
-
-
-    '    vent_ = vent
-    '    esNuevo = True
-
-    'End Sub
-
-
-
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
         Close()
@@ -71,7 +50,7 @@ Public Class FormVentas
 
     End Sub
 
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+    Public Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
 
 
 
@@ -80,8 +59,8 @@ Public Class FormVentas
         LstProductos.ShowDialog()
 
 
-        txtIdProducto.Text = LstProductos.producto.Id
-        txtDescripcion.Text = LstProductos.producto.nombre
+        'txtIdProducto.Text = LstProductos.producto.Id
+        'txtDescripcion.Text = LstProductos.producto.nombre
 
 
     End Sub
@@ -98,23 +77,6 @@ Public Class FormVentas
 
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-
-
-
-        'Dim pro As New productosClass
-
-
-        'pro.Id = txtIdProducto.Text
-        'pro.nombre = txtDescripcion.Text
-        'pro.cantidad = txtCantidad.Text
-
-        'If esNuevo Then
-
-        '    pro.Agregar(pro)
-
-        '    Close()
-
-        'End If
 
     End Sub
 End Class
