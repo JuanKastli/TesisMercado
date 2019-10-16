@@ -103,4 +103,49 @@ Public Class Gastos
         End Try
     End Sub
 
+
+    Public Sub Modificar(ByVal gasto As Gastos)
+
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("GastosModificar", objConexion)
+
+
+            objComando.CommandType = CommandType.StoredProcedure
+
+            objComando.Parameters.AddWithValue("@Id", gasto.Id)
+            objComando.Parameters.AddWithValue("@fecha", gasto.Fecha)
+            objComando.Parameters.AddWithValue("@Nro_factura", gasto.Nfactura)
+            objComando.Parameters.AddWithValue("@descripcion", gasto.Descripcion)
+            objComando.Parameters.AddWithValue("@monto", gasto.Monto)
+
+            objComando.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
+        End Try
+
+    End Sub
+
+
+    Public Sub Eliminar(ByVal gasto As Gastos)
+
+        Try
+            Abrir()
+
+            Dim sqlComando As New SqlCommand("GastosEliminar", objConexion)
+            sqlComando.CommandType = CommandType.StoredProcedure
+            sqlComando.Parameters.AddWithValue("@Id", Id)
+
+            sqlComando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("NO SE PUEDE ELIMINAR EL REGISTRO...!")
+        End Try
+
+    End Sub
+
 End Class
