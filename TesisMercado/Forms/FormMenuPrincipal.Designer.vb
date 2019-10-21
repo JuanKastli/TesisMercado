@@ -74,19 +74,19 @@ Partial Class FormMenuPrincipal
         'RubrosToolStripMenuItem1
         '
         Me.RubrosToolStripMenuItem1.Name = "RubrosToolStripMenuItem1"
-        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(212, 26)
+        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(213, 26)
         Me.RubrosToolStripMenuItem1.Text = "Rubros"
         '
         'ProveedoresToolStripMenuItem1
         '
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(212, 26)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(213, 26)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'StockDeProductosToolStripMenuItem
         '
         Me.StockDeProductosToolStripMenuItem.Name = "StockDeProductosToolStripMenuItem"
-        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
+        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(213, 26)
         Me.StockDeProductosToolStripMenuItem.Text = "Stock de Productos"
         '
         'ClientesToolStripMenuItem1
@@ -124,7 +124,7 @@ Partial Class FormMenuPrincipal
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("PMingLiU-ExtB", 72.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(143, 405)
+        Me.Label1.Location = New System.Drawing.Point(143, 414)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(800, 127)
         Me.Label1.TabIndex = 1
@@ -135,9 +135,9 @@ Partial Class FormMenuPrincipal
         Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(589, 183)
+        Me.PictureBox1.Location = New System.Drawing.Point(554, 150)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(343, 226)
+        Me.PictureBox1.Size = New System.Drawing.Size(334, 245)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '

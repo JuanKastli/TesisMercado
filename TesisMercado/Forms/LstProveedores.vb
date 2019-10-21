@@ -21,7 +21,7 @@ Public Class LstProveedores
 
     Private Sub LstProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        proveedor.LlenarTabla(dgvProveedores)
+        proveedor.ConsultarProveedor(dgvProveedores)
 
     End Sub
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click

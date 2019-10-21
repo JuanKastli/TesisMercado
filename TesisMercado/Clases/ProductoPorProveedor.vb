@@ -61,7 +61,7 @@ Public Class ProductoPorProveedor
             ProduProve.id = fila.Cells("id").Value
             ProduProve.idProducto = fila.Cells("idProducto").Value
             ProduProve.idProveedor = fila.Cells("idProveedor").Value
-            ProduProve.nombreProveedor = fila.Cells("nombreProveedor").Value
+            ProduProve.nombreProveedor = fila.Cells("nombreproveedor").Value
             ProduProve.paraBorrar = fila.Cells("paraBorrar").Value
             listaProduProve.Add(ProduProve)
         Next
@@ -89,7 +89,7 @@ Public Class ProductoPorProveedor
         lista.Columns("id").Width = 30
         lista.Columns("idProveedor").Visible = False
         lista.Columns("idProducto").Visible = False
-        lista.Columns("nombreProveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        lista.Columns("nombreproveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         lista.Columns("paraBorrar").Width = 30
     End Sub
 
@@ -153,9 +153,9 @@ Public Class ProductoPorProveedor
                 If objDataTable.Rows.Count > 0 Then
                     lista.DataSource = objDataTable
                     lista.Columns("id").Width = 40
-                    lista.Columns("idProducto").Visible = False
-                    lista.Columns("idProveedor").Visible = False
-                    lista.Columns("nombreProveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    lista.Columns("idproducto").Visible = False
+                    lista.Columns("idproveedor").Visible = False
+                    lista.Columns("nombreproveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("paraBorrar").Width = 30
                 Else
                     lista.DataSource = Nothing

@@ -47,11 +47,26 @@ Public Class ProveedoresClass
     End Property
 
 
-    Public Sub LlenarTabla(ByVal listado As DataGridView)
+    Public Sub ConsultarProveedor(ByVal listado As DataGridView)
         Try
             Abrir()
-            Dim objComando As New SqlCommand("ProductosLlenarTabla", objConexion)
+            Dim objComando As New SqlCommand("ConsultarProveedor", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    listado.DataSource = objDataTable
+                    listado.Columns("id").Width = 50
+                    listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("direccion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+                Else
+                    listado.DataSource = Nothing
+                End If
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -65,7 +80,7 @@ Public Class ProveedoresClass
         Try
             Abrir()
 
-            Dim objComando As New SqlCommand("ProveedoresAgreagar", objConexion)
+            Dim objComando As New SqlCommand("ProveedoresAgregar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
 
             'sqlComando.Parameters.AddWithValue("@Id", Producto.Id)
