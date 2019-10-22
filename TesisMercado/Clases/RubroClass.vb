@@ -112,6 +112,22 @@ Public Class RubroClass
 
     End Sub
 
+    Public Sub CargarCombo(ByVal combo As ComboBox)
+        Abrir()
+        Dim objComando As New SqlCommand("CargarRubro", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        Dim objdatatable As New Data.DataTable
+        Dim objdataAdapter As New SqlDataAdapter(objComando)
+        objdataAdapter.Fill(objdatatable)
+        With combo
+            .DataSource = objdatatable
+            .DisplayMember = "nombreRubro"
+            .ValueMember = "id"
+
+        End With
+        Cerrar()
+    End Sub
+
 
 
 

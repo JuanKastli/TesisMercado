@@ -41,6 +41,7 @@ Public Class ProduProveForm
         producto.unidad = ""
         producto.cantidad = 0
         producto.Precio = 0
+        producto.id_Rubro = Nothing
         esNuevo = True
 
     End Sub
@@ -69,13 +70,14 @@ Public Class ProduProveForm
             producto.unidad = txtUnidad.Text
             producto.cantidad = txtCantidad.Text
             producto.Precio = txtPrecio.Text
+            producto.id_Rubro = cmbRubro.SelectedValue
 
             If esNuevo Then
                 producto.Id = producto.Agregar(producto)
 
             Else
 
-                'producto.id = txtid.Text
+                producto.Id = txtid.Text
                 producto.Modificar(producto)
 
 
@@ -101,6 +103,7 @@ Public Class ProduProveForm
 
     End Sub
 
+    Dim idRubro As New RubroClass
     Private Sub ProduProveForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtNombre.Text = producto.nombre
         txtCodigo.Text = producto.codigo
@@ -108,6 +111,8 @@ Public Class ProduProveForm
         txtCantidad.Text = producto.cantidad
         txtPrecio.Text = producto.Precio
         txtid.Text = producto.Id
+        idRubro.CargarCombo(cmbRubro)
+        cmbRubro.SelectedValue = producto.id_Rubro
 
         ProduProve.Consultar(producto.Id, dgvProduProve)
     End Sub
@@ -152,7 +157,6 @@ Public Class ProduProveForm
     Private Sub txtPrecio_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrecio.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = True
-
         End If
     End Sub
 End Class

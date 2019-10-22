@@ -34,7 +34,7 @@ Partial Class FormVentasDetalle
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(531, 503)
+        Me.btnCancelar.Location = New System.Drawing.Point(709, 596)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 52)
         Me.btnCancelar.TabIndex = 11
@@ -47,9 +47,9 @@ Partial Class FormVentasDetalle
         Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAceptar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(201, 474)
+        Me.btnAceptar.Location = New System.Drawing.Point(12, 596)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(218, 81)
+        Me.btnAceptar.Size = New System.Drawing.Size(202, 52)
         Me.btnAceptar.TabIndex = 10
         Me.btnAceptar.Text = "Realizar Nueva Venta"
         Me.btnAceptar.UseVisualStyleBackColor = False
@@ -62,14 +62,14 @@ Partial Class FormVentasDetalle
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(612, 456)
+        Me.DataGridView1.Size = New System.Drawing.Size(790, 578)
         Me.DataGridView1.TabIndex = 12
         '
         'FormVentasDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 567)
+        Me.ClientSize = New System.Drawing.Size(814, 660)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)

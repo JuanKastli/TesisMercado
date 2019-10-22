@@ -37,7 +37,7 @@ Partial Class LstProductos
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCerrar.Location = New System.Drawing.Point(544, 333)
+        Me.btnCerrar.Location = New System.Drawing.Point(678, 609)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(112, 39)
         Me.btnCerrar.TabIndex = 17
@@ -49,7 +49,7 @@ Partial Class LstProductos
         Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBorrar.Location = New System.Drawing.Point(187, 333)
+        Me.btnBorrar.Location = New System.Drawing.Point(187, 609)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 39)
         Me.btnBorrar.TabIndex = 16
@@ -61,7 +61,7 @@ Partial Class LstProductos
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnModificar.Location = New System.Drawing.Point(106, 333)
+        Me.btnModificar.Location = New System.Drawing.Point(106, 609)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 39)
         Me.btnModificar.TabIndex = 15
@@ -73,7 +73,7 @@ Partial Class LstProductos
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAgregar.Location = New System.Drawing.Point(25, 333)
+        Me.btnAgregar.Location = New System.Drawing.Point(25, 609)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 39)
         Me.btnAgregar.TabIndex = 14
@@ -97,14 +97,14 @@ Partial Class LstProductos
         Me.dgvProductos.ReadOnly = True
         Me.dgvProductos.RowHeadersVisible = False
         Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProductos.Size = New System.Drawing.Size(656, 315)
+        Me.dgvProductos.Size = New System.Drawing.Size(790, 591)
         Me.dgvProductos.TabIndex = 13
         '
         'LstProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(680, 384)
+        Me.ClientSize = New System.Drawing.Size(814, 660)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)

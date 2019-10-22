@@ -43,6 +43,8 @@ Partial Class ProduProveForm
         Me.txtNombre = New System.Windows.Forms.TextBox
         Me.txtid = New System.Windows.Forms.TextBox
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.cmbRubro = New System.Windows.Forms.ComboBox
         CType(Me.dgvProduProve, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,57 +52,51 @@ Partial Class ProduProveForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(49, 180)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(37, 146)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 17)
+        Me.Label7.Size = New System.Drawing.Size(40, 13)
         Me.Label7.TabIndex = 49
         Me.Label7.Text = "Precio:"
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(119, 176)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrecio.Location = New System.Drawing.Point(89, 143)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(136, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(121, 20)
         Me.txtPrecio.TabIndex = 37
         Me.txtPrecio.Tag = "*"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(38, 148)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(28, 120)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 17)
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "Cantidad:"
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(119, 144)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCantidad.Location = New System.Drawing.Point(89, 117)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(136, 22)
+        Me.txtCantidad.Size = New System.Drawing.Size(121, 20)
         Me.txtCantidad.TabIndex = 36
         Me.txtCantidad.Tag = "*"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(49, 116)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(37, 94)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 17)
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 47
         Me.Label5.Text = "Unidad:"
         '
         'txtUnidad
         '
-        Me.txtUnidad.Location = New System.Drawing.Point(119, 112)
-        Me.txtUnidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUnidad.Location = New System.Drawing.Point(89, 91)
         Me.txtUnidad.Name = "txtUnidad"
-        Me.txtUnidad.Size = New System.Drawing.Size(279, 22)
+        Me.txtUnidad.Size = New System.Drawing.Size(210, 20)
         Me.txtUnidad.TabIndex = 35
         Me.txtUnidad.Tag = "*"
         '
@@ -116,15 +112,14 @@ Partial Class ProduProveForm
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvProduProve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProduProve.Location = New System.Drawing.Point(119, 225)
-        Me.dgvProduProve.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvProduProve.Location = New System.Drawing.Point(86, 199)
         Me.dgvProduProve.MultiSelect = False
         Me.dgvProduProve.Name = "dgvProduProve"
         Me.dgvProduProve.ReadOnly = True
         Me.dgvProduProve.RowHeadersVisible = False
         Me.dgvProduProve.RowTemplate.Height = 24
         Me.dgvProduProve.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProduProve.Size = New System.Drawing.Size(573, 204)
+        Me.dgvProduProve.Size = New System.Drawing.Size(430, 166)
         Me.dgvProduProve.TabIndex = 46
         '
         'btnCancelar
@@ -132,10 +127,9 @@ Partial Class ProduProveForm
         Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(386, 457)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Location = New System.Drawing.Point(290, 371)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(148, 28)
+        Me.btnCancelar.Size = New System.Drawing.Size(111, 23)
         Me.btnCancelar.TabIndex = 41
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -145,10 +139,9 @@ Partial Class ProduProveForm
         Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(230, 457)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAceptar.Location = New System.Drawing.Point(172, 371)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(148, 28)
+        Me.btnAceptar.Size = New System.Drawing.Size(111, 23)
         Me.btnAceptar.TabIndex = 40
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
@@ -158,10 +151,9 @@ Partial Class ProduProveForm
         Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBorrar.Location = New System.Drawing.Point(13, 350)
-        Me.btnBorrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBorrar.Location = New System.Drawing.Point(9, 297)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(100, 28)
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 39
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -171,10 +163,9 @@ Partial Class ProduProveForm
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAgregar.Location = New System.Drawing.Point(13, 314)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAgregar.Location = New System.Drawing.Point(9, 268)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(100, 28)
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 38
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
@@ -182,80 +173,92 @@ Partial Class ProduProveForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 225)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 199)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 17)
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 45
         Me.Label4.Text = "Proveedores:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(49, 84)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(37, 68)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 17)
+        Me.Label3.Size = New System.Drawing.Size(43, 13)
         Me.Label3.TabIndex = 44
         Me.Label3.Text = "Codigo:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(49, 52)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(37, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 17)
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Nombre:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(82, 20)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(62, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(23, 17)
+        Me.Label1.Size = New System.Drawing.Size(19, 13)
         Me.Label1.TabIndex = 42
         Me.Label1.Text = "Id:"
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(119, 80)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigo.Location = New System.Drawing.Point(89, 65)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(279, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(210, 20)
         Me.txtCodigo.TabIndex = 34
         Me.txtCodigo.Tag = "*"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(119, 48)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Location = New System.Drawing.Point(89, 39)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(279, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(210, 20)
         Me.txtNombre.TabIndex = 33
         Me.txtNombre.Tag = "*"
         '
         'txtid
         '
         Me.txtid.Enabled = False
-        Me.txtid.Location = New System.Drawing.Point(119, 16)
-        Me.txtid.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtid.Location = New System.Drawing.Point(89, 13)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(136, 22)
+        Me.txtid.Size = New System.Drawing.Size(121, 20)
         Me.txtid.TabIndex = 32
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(37, 172)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.TabIndex = 51
+        Me.Label8.Text = "Rubro:"
+        '
+        'cmbRubro
+        '
+        Me.cmbRubro.FormattingEnabled = True
+        Me.cmbRubro.Location = New System.Drawing.Point(89, 172)
+        Me.cmbRubro.Name = "cmbRubro"
+        Me.cmbRubro.Size = New System.Drawing.Size(121, 21)
+        Me.cmbRubro.TabIndex = 52
+        '
         'ProduProveForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 500)
+        Me.ClientSize = New System.Drawing.Size(528, 406)
+        Me.Controls.Add(Me.cmbRubro)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.Label6)
@@ -274,7 +277,9 @@ Partial Class ProduProveForm
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtid)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ProduProveForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ProduProveForm"
         CType(Me.dgvProduProve, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -301,4 +306,6 @@ Partial Class ProduProveForm
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents cmbRubro As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

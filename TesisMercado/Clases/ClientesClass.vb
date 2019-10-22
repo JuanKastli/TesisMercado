@@ -130,7 +130,7 @@ Public Class ClientesClass
     End Sub
 
 
-    Public Sub Eliminar(ByVal clientes As ClientesClass)
+    Public Sub Eliminar(ByVal clientes As Integer)
 
         Try
             Abrir()

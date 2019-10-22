@@ -90,7 +90,7 @@ Public Class productosClass
         Try
             Abrir()
 
-            Dim objComando As New SqlCommand("ConsultarProducto", objconexion)
+            Dim objComando As New SqlCommand("ConsultarProducto", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
 
             If objComando.ExecuteNonQuery Then
@@ -132,7 +132,7 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@codigo", Producto.codigo)
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
-            'sqlComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
+            objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
             objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
             objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
             objComando.ExecuteNonQuery()
@@ -163,7 +163,7 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@codigo", Producto.codigo)
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
-            'sqlComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
+            objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
             objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
             objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
 
@@ -196,5 +196,6 @@ Public Class productosClass
         End Try
 
     End Sub
+   
 
 End Class

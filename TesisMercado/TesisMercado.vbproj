@@ -134,6 +134,7 @@
       <DependentUpon>FormProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProveedores.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormProveedoresDetalle.Designer.vb">
       <DependentUpon>FormProveedoresDetalle.vb</DependentUpon>
