@@ -4,8 +4,10 @@ Public Class LstProductos
 
     Dim producto As New productosClass
 
-    Private Sub LstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Public Sub LstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         producto.ConsultarProducto(dgvProductos)
+
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
@@ -18,16 +20,20 @@ Public Class LstProductos
 
 
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
-        producto.id = dgvProductos.Item("id", dgvProductos.CurrentRow.Index).Value
+
+        producto.Id = dgvProductos.Item("id", dgvProductos.CurrentRow.Index).Value
         Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & producto.id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
             producto.Eliminar(producto)
         End If
+
         producto.ConsultarProducto(dgvProductos)
+
     End Sub
 
     Public Sub ModificarProducto()
-        producto.id = dgvProductos.Item("id", dgvProductos.CurrentRow.Index).Value
+
+        producto.Id = dgvProductos.Item("id", dgvProductos.CurrentRow.Index).Value
         producto.nombre = dgvProductos.Item("nombre", dgvProductos.CurrentRow.Index).Value
         producto.codigo = dgvProductos.Item("codigo", dgvProductos.CurrentRow.Index).Value
         producto.unidad = dgvProductos.Item("unidad", dgvProductos.CurrentRow.Index).Value
@@ -49,7 +55,15 @@ Public Class LstProductos
 
     Private Sub dgvProductos_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProductos.CellDoubleClick
 
-        ModificarProducto()
+        'ModificarProducto()
+
+    End Sub
+    Public Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProductos.CellDoubleClick
+
+        producto.Id = dgvProductos.Item("Id", dgvProductos.CurrentRow.Index).Value
+        producto.nombre = dgvProductos.Item("nombre", dgvProductos.CurrentRow.Index).Value
+        producto.cantidad = dgvProductos.Item("cantidad", dgvProductos.CurrentRow.Index).Value
+        producto.Precio = dgvProductos.Item("Precio", dgvProductos.CurrentRow.Index).Value
 
     End Sub
 

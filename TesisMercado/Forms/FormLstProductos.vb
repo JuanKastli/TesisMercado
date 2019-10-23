@@ -1,56 +1,71 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+
 Public Class FormLstProductos
 
-    Private producto As New productosClass
+    'Inherits Conexion
+    'Private producto_ As New productosClass
 
-    Private Sub FormLstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        producto.ConsultarProducto(DataGridView1)
+    'Public Property producto() As productosClass
+    '    Get
+    '        Return producto_
+    '    End Get
+    '    Set(ByVal value As productosClass)
+    '        producto_ = value
+    '    End Set
+    'End Property
 
-    End Sub
+    'Dim Pro As New productosClass
 
-    'Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+    'Private Sub FormLstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    '    Dim ProduProveForm As New ProduProveForm()
-    '    ProduProveForm.ShowDialog()
-    '    producto.ConsultarProducto(DataGridView1)
+    '    ConsultarProducto(DataGridView1)
 
     'End Sub
 
-    'Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
-    '    producto.Id = DataGridView1.Item("id", DataGridView1.CurrentRow.Index).Value
-    '    Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & producto.id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
-    '    If respuesta = Windows.Forms.DialogResult.OK Then
-    '        producto.Borrar(producto)
-    '    End If
-    '    producto.ConsultarProducto(DataGridView1)
+    'Public Sub ConsultarProducto(ByVal listado As DataGridView)
+    '    Try
+    '        Abrir()
+
+    '        Dim objComando As New SqlCommand("ConsultarProducto", objConexion)
+    '        objComando.CommandType = CommandType.StoredProcedure
+
+    '        If objComando.ExecuteNonQuery Then
+    '            Dim objDataAdapter As New SqlDataAdapter(objComando)
+    '            Dim objDataTable As New Data.DataTable
+    '            objDataAdapter.Fill(objDataTable)
+    '            If objDataTable.Rows.Count > 0 Then
+    '                listado.DataSource = objDataTable
+    '                listado.Columns("id").Width = 50
+    '                'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+    '                listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+    '            Else
+    '                listado.DataSource = Nothing
+    '            End If
+    '        End If
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '    Finally
+    '        Cerrar()
+
+    '    End Try
+
     'End Sub
 
-    'Public Sub ModificarProducto()
-    '    producto.Id = DataGridView1.Item("id", DataGridView1.CurrentRow.Index).Value
+    'Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+
+    '    producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
     '    producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
-    '    producto.codigo = DataGridView1.Item("codigo", DataGridView1.CurrentRow.Index).Value
-    '    producto.unidad = DataGridView1.Item("unidad", DataGridView1.CurrentRow.Index).Value
     '    producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
-    '    producto.Precio = DataGridView1.Item("precio", DataGridView1.CurrentRow.Index).Value
+    '    producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
+    '    Close()
+    'End Sub
 
-    '    Dim ProduProveForm As New ProduProveForm(producto)
-    '    ProduProveForm.ShowDialog()
-    '    producto.ConsultarProducto(DataGridView1)
+    'Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+
+    '    Close()
 
     'End Sub
 
-    'Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
-    '    ModificarProducto()
-    'End Sub
-
-    'Private Sub dgvProductos_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProductos.CellDoubleClick
-    '    ModificarProducto()
-    'End Sub
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-
-        Close()
-
-    End Sub
 End Class
