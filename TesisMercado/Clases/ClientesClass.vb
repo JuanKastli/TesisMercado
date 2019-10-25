@@ -2,6 +2,8 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Public Class ClientesClass
+    'total de cuenta decimal y habilitacion checkbox
+
     Inherits Conexion
     Dim Id_, telefono_ As Integer
     Dim nombre_, apellido_, direccion_ As String

@@ -1,8 +1,8 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class ventaClass
-
-    Dim Id_, nro_ticket_, id_cliente_, CantDeP_, Total_ As Integer
+    'tipo de comprobante y id int
+    Dim Id_, id_cliente_, CantDeP_, Total_ As Integer
     Dim fecha_ As DateTime
 
     Public Property Id() As Integer
@@ -11,15 +11,6 @@ Public Class ventaClass
         End Get
         Set(ByVal value As Integer)
             Id_ = value
-        End Set
-    End Property
-
-    Public Property nro_ticket() As Integer
-        Get
-            Return nro_ticket_
-        End Get
-        Set(ByVal value As Integer)
-            nro_ticket_ = value
         End Set
     End Property
 
