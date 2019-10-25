@@ -105,6 +105,7 @@ Public Class ProduProveForm
 
     Dim idRubro As New RubroClass
     Private Sub ProduProveForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         txtNombre.Text = producto.nombre
         txtCodigo.Text = producto.codigo
         txtUnidad.Text = producto.unidad
@@ -158,5 +159,9 @@ Public Class ProduProveForm
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub txtCantidad_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCantidad.TextChanged
+
     End Sub
 End Class

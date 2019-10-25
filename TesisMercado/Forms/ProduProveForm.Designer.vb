@@ -51,8 +51,9 @@ Partial Class ProduProveForm
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(37, 146)
+        Me.Label7.Location = New System.Drawing.Point(461, 57)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(40, 13)
         Me.Label7.TabIndex = 49
@@ -60,16 +61,18 @@ Partial Class ProduProveForm
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(89, 143)
+        Me.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtPrecio.Location = New System.Drawing.Point(519, 54)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(121, 20)
-        Me.txtPrecio.TabIndex = 37
+        Me.txtPrecio.TabIndex = 5
         Me.txtPrecio.Tag = "*"
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(28, 120)
+        Me.Label6.Location = New System.Drawing.Point(462, 31)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 48
@@ -77,16 +80,18 @@ Partial Class ProduProveForm
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(89, 117)
+        Me.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtCantidad.Location = New System.Drawing.Point(519, 28)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(121, 20)
-        Me.txtCantidad.TabIndex = 36
+        Me.txtCantidad.TabIndex = 4
         Me.txtCantidad.Tag = "*"
         '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(37, 94)
+        Me.Label5.Location = New System.Drawing.Point(193, 83)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 47
@@ -94,10 +99,11 @@ Partial Class ProduProveForm
         '
         'txtUnidad
         '
-        Me.txtUnidad.Location = New System.Drawing.Point(89, 91)
+        Me.txtUnidad.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtUnidad.Location = New System.Drawing.Point(245, 80)
         Me.txtUnidad.Name = "txtUnidad"
         Me.txtUnidad.Size = New System.Drawing.Size(210, 20)
-        Me.txtUnidad.TabIndex = 35
+        Me.txtUnidad.TabIndex = 3
         Me.txtUnidad.Tag = "*"
         '
         'dgvProduProve
@@ -108,72 +114,75 @@ Partial Class ProduProveForm
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
         Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvProduProve.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvProduProve.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvProduProve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProduProve.Location = New System.Drawing.Point(86, 199)
+        Me.dgvProduProve.Location = New System.Drawing.Point(149, 116)
         Me.dgvProduProve.MultiSelect = False
         Me.dgvProduProve.Name = "dgvProduProve"
         Me.dgvProduProve.ReadOnly = True
         Me.dgvProduProve.RowHeadersVisible = False
         Me.dgvProduProve.RowTemplate.Height = 24
         Me.dgvProduProve.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProduProve.Size = New System.Drawing.Size(430, 166)
+        Me.dgvProduProve.Size = New System.Drawing.Size(565, 215)
         Me.dgvProduProve.TabIndex = 46
         '
         'btnCancelar
         '
-        Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(290, 371)
+        Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnCancelar.Location = New System.Drawing.Point(602, 360)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(111, 23)
-        Me.btnCancelar.TabIndex = 41
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
+        Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(172, 371)
+        Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAceptar.Location = New System.Drawing.Point(447, 360)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(111, 23)
-        Me.btnAceptar.TabIndex = 40
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
+        Me.btnAceptar.TabIndex = 10
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'btnBorrar
         '
-        Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBorrar.Location = New System.Drawing.Point(9, 297)
+        Me.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnBorrar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnBorrar.Location = New System.Drawing.Point(12, 238)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 39
+        Me.btnBorrar.Size = New System.Drawing.Size(112, 39)
+        Me.btnBorrar.TabIndex = 8
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnAgregar
         '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAgregar.Location = New System.Drawing.Point(9, 268)
+        Me.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 177)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 38
+        Me.btnAgregar.Size = New System.Drawing.Size(112, 39)
+        Me.btnAgregar.TabIndex = 7
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(10, 199)
+        Me.Label4.Location = New System.Drawing.Point(75, 116)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 45
@@ -181,8 +190,9 @@ Partial Class ProduProveForm
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(37, 68)
+        Me.Label3.Location = New System.Drawing.Point(193, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(43, 13)
         Me.Label3.TabIndex = 44
@@ -190,8 +200,9 @@ Partial Class ProduProveForm
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(37, 42)
+        Me.Label2.Location = New System.Drawing.Point(193, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 43
@@ -199,8 +210,9 @@ Partial Class ProduProveForm
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(62, 16)
+        Me.Label1.Location = New System.Drawing.Point(13, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(19, 13)
         Me.Label1.TabIndex = 42
@@ -208,28 +220,31 @@ Partial Class ProduProveForm
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(89, 65)
+        Me.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtCodigo.Location = New System.Drawing.Point(245, 54)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(210, 20)
-        Me.txtCodigo.TabIndex = 34
+        Me.txtCodigo.TabIndex = 2
         Me.txtCodigo.Tag = "*"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(89, 39)
+        Me.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtNombre.Location = New System.Drawing.Point(245, 28)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(210, 20)
-        Me.txtNombre.TabIndex = 33
+        Me.txtNombre.TabIndex = 1
         Me.txtNombre.Tag = "*"
         '
         'txtid
         '
+        Me.txtid.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtid.Enabled = False
-        Me.txtid.Location = New System.Drawing.Point(89, 13)
+        Me.txtid.Location = New System.Drawing.Point(41, 12)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(121, 20)
-        Me.txtid.TabIndex = 32
+        Me.txtid.Size = New System.Drawing.Size(104, 20)
+        Me.txtid.TabIndex = 0
         '
         'ErrorProvider1
         '
@@ -237,8 +252,9 @@ Partial Class ProduProveForm
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(37, 172)
+        Me.Label8.Location = New System.Drawing.Point(461, 83)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 51
@@ -246,17 +262,18 @@ Partial Class ProduProveForm
         '
         'cmbRubro
         '
+        Me.cmbRubro.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cmbRubro.FormattingEnabled = True
-        Me.cmbRubro.Location = New System.Drawing.Point(89, 172)
+        Me.cmbRubro.Location = New System.Drawing.Point(519, 80)
         Me.cmbRubro.Name = "cmbRubro"
         Me.cmbRubro.Size = New System.Drawing.Size(121, 21)
-        Me.cmbRubro.TabIndex = 52
+        Me.cmbRubro.TabIndex = 6
         '
         'ProduProveForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(528, 406)
+        Me.ClientSize = New System.Drawing.Size(726, 413)
         Me.Controls.Add(Me.cmbRubro)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)

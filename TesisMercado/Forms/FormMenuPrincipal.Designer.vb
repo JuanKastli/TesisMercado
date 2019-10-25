@@ -42,7 +42,7 @@ Partial Class FormMenuPrincipal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Green
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.ServiciosToolStripMenuItem, Me.UsuariosToolStripMenuItem})
@@ -55,7 +55,7 @@ Partial Class FormMenuPrincipal
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.AutoSize = False
-        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.Black
+        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.Green
         Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VentasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
@@ -65,7 +65,7 @@ Partial Class FormMenuPrincipal
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.AutoSize = False
-        Me.ProductosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ProductosToolStripMenuItem.BackColor = System.Drawing.Color.Green
         Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RubrosToolStripMenuItem1, Me.ProveedoresToolStripMenuItem1, Me.StockDeProductosToolStripMenuItem})
         Me.ProductosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProductosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -76,24 +76,25 @@ Partial Class FormMenuPrincipal
         'RubrosToolStripMenuItem1
         '
         Me.RubrosToolStripMenuItem1.Name = "RubrosToolStripMenuItem1"
-        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(212, 26)
+        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(213, 26)
         Me.RubrosToolStripMenuItem1.Text = "Rubros"
         '
         'ProveedoresToolStripMenuItem1
         '
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(212, 26)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(213, 26)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'StockDeProductosToolStripMenuItem
         '
         Me.StockDeProductosToolStripMenuItem.Name = "StockDeProductosToolStripMenuItem"
-        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
+        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(213, 26)
         Me.StockDeProductosToolStripMenuItem.Text = "Stock de Productos"
         '
         'ClientesToolStripMenuItem1
         '
         Me.ClientesToolStripMenuItem1.AutoSize = False
+        Me.ClientesToolStripMenuItem1.BackColor = System.Drawing.Color.Green
         Me.ClientesToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClientesToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
@@ -103,7 +104,7 @@ Partial Class FormMenuPrincipal
         'ServiciosToolStripMenuItem
         '
         Me.ServiciosToolStripMenuItem.AutoSize = False
-        Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.Color.Green
         Me.ServiciosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ServiciosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
@@ -113,6 +114,7 @@ Partial Class FormMenuPrincipal
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.AutoSize = False
+        Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.Color.Green
         Me.UsuariosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
@@ -132,7 +134,7 @@ Partial Class FormMenuPrincipal
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.BackColor = System.Drawing.Color.Green
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("PMingLiU-ExtB", 72.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight

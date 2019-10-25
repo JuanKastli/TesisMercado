@@ -41,24 +41,23 @@ Partial Class LstProveedores
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProveedores.Location = New System.Drawing.Point(16, 9)
-        Me.dgvProveedores.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvProveedores.Location = New System.Drawing.Point(12, 7)
         Me.dgvProveedores.Name = "dgvProveedores"
         Me.dgvProveedores.ReadOnly = True
         Me.dgvProveedores.RowHeadersVisible = False
         Me.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProveedores.Size = New System.Drawing.Size(493, 358)
+        Me.dgvProveedores.Size = New System.Drawing.Size(435, 346)
         Me.dgvProveedores.TabIndex = 10
         '
         'btnCancelar
         '
         Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(267, 374)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnCancelar.Location = New System.Drawing.Point(335, 359)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 52)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -66,24 +65,25 @@ Partial Class LstProveedores
         'btnAceptar
         '
         Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(159, 374)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAceptar.Location = New System.Drawing.Point(217, 357)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(100, 52)
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
         Me.btnAceptar.TabIndex = 8
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'LstProveedores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(525, 434)
+        Me.ClientSize = New System.Drawing.Size(459, 408)
         Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LstProveedores"
         Me.Text = "LstProveedores"
         CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()

@@ -123,6 +123,7 @@
       <DependentUpon>FormProductos.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProductos.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormProductosDetalle.Designer.vb">
       <DependentUpon>FormProductosDetalle.vb</DependentUpon>
@@ -200,6 +201,12 @@
       <DependentUpon>ProduProveForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProduProveForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProveProduForm.Designer.vb">
+      <DependentUpon>ProveProduForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProveProduForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -283,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProduProveForm.resx">
       <DependentUpon>ProduProveForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProveProduForm.resx">
+      <DependentUpon>ProveProduForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

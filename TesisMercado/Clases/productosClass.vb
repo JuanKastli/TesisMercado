@@ -140,7 +140,7 @@ Public Class productosClass
             Dim objComando2 As New SqlCommand("ProductoUltimo", objConexion)
             objComando2.CommandType = CommandType.StoredProcedure
 
-            Return objComando.ExecuteNonQuery()
+            Return objComando2.ExecuteScalar()
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -188,6 +188,7 @@ Public Class productosClass
             Dim objComando As New SqlCommand("productosEliminar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Id", producto.Id)
+            'objComando.Parameters.AddWithValue("@id_Rubro", producto.id_Rubro)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)

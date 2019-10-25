@@ -53,14 +53,14 @@ Public Class FormVentas
     Public Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
 
 
-        Dim LstProductos As New LstProductos
+        Dim FormProductos As New FormProductos
 
-        LstProductos.ShowDialog()
+        FormProductos.ShowDialog()
 
 
-        'txtIdProducto.Text = LstProductos.producto.Id
-        'txtDescripcion.Text = LstProductos.producto.nombre
-       
+        ' txtIdProducto.Text = FormProductos.producto.Id
+        ' txtDescripcion.Text = FormProductos.producto.nombre
+
 
 
     End Sub

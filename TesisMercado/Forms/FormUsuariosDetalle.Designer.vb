@@ -55,7 +55,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(27, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
@@ -74,7 +74,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(10, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(92, 13)
@@ -85,7 +85,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(12, 125)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 13)
@@ -105,7 +105,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(10, 167)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(108, 13)
@@ -130,7 +130,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(28, 203)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 13)
@@ -149,7 +149,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(28, 241)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
@@ -167,7 +167,7 @@ Partial Class FormUsuariosDetalle
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(43, 18)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(16, 13)

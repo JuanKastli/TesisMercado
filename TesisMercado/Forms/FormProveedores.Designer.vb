@@ -22,13 +22,14 @@ Partial Class FormProveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label1 = New System.Windows.Forms.Label
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.dgvProveedores = New System.Windows.Forms.DataGridView
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -37,70 +38,79 @@ Partial Class FormProveedores
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(12, 29)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(139, 25)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Proveedores"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'DataGridView1
+        'dgvProveedores
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 65)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(790, 525)
-        Me.DataGridView1.TabIndex = 18
+        Me.dgvProveedores.AllowUserToAddRows = False
+        Me.dgvProveedores.AllowUserToDeleteRows = False
+        Me.dgvProveedores.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvProveedores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvProveedores.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProveedores.Location = New System.Drawing.Point(12, 37)
+        Me.dgvProveedores.Name = "dgvProveedores"
+        Me.dgvProveedores.RowTemplate.Height = 24
+        Me.dgvProveedores.Size = New System.Drawing.Size(790, 566)
+        Me.dgvProveedores.TabIndex = 18
         '
         'btnEliminar
         '
-        Me.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnEliminar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnEliminar.Location = New System.Drawing.Point(227, 596)
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnEliminar.Location = New System.Drawing.Point(248, 609)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(93, 52)
+        Me.btnEliminar.Size = New System.Drawing.Size(112, 39)
         Me.btnEliminar.TabIndex = 21
-        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.Text = "Borrar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnAgregar
         '
-        Me.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAgregar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 596)
+        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 609)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(93, 52)
+        Me.btnAgregar.Size = New System.Drawing.Size(112, 39)
         Me.btnAgregar.TabIndex = 19
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(709, 596)
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnCancelar.Location = New System.Drawing.Point(678, 609)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 52)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 22
         Me.btnCancelar.Text = "Volver"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnModificar
         '
-        Me.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnModificar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnModificar.Location = New System.Drawing.Point(117, 596)
+        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnModificar.Location = New System.Drawing.Point(130, 609)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 52)
+        Me.btnModificar.Size = New System.Drawing.Size(112, 39)
         Me.btnModificar.TabIndex = 20
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
@@ -114,18 +124,17 @@ Partial Class FormProveedores
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnModificar)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormProveedores"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormProveedores"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvProveedores As System.Windows.Forms.DataGridView
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button

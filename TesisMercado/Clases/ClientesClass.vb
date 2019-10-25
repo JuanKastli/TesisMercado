@@ -64,6 +64,7 @@ Public Class ClientesClass
                 If objDataTable.Rows.Count > 0 Then
                     listado.DataSource = objDataTable
                     listado.Columns("id").Width = 50
+                    listado.Columns("direccion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                 Else
                     listado.DataSource = Nothing
