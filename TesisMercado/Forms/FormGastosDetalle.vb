@@ -85,11 +85,11 @@ Public Class FormGastosDetalle
    
    
     Private Sub FormGastosDetalle_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim gas As New Gastos
-        'TxtId.Text = gas.Id
-        'txtnfactura = gas.Nfactura
-        'txtdescripcion = gas.Descripcion
-        'txtmonto = gas.Monto
+        'Dim gas As New Gastos
+        TxtId.Text = gas.Id
+        txtnfactura.Text = gas.Nfactura
+        txtdescripcion.Text = gas.Descripcion
+        txtmonto.Text = gas.Monto
 
 
 

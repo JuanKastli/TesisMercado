@@ -28,7 +28,7 @@ Public Class FormGastos
         gasto.Descripcion = dgvGastos.Item("Descripcion", dgvGastos.CurrentRow.Index).Value
         gasto.Monto = dgvGastos.Item("Monto", dgvGastos.CurrentRow.Index).Value
 
-        Dim FormGastosDetalle As New FormGastosDetalle()
+        Dim FormGastosDetalle As New FormGastosDetalle(gasto)
 
         FormGastosDetalle.ShowDialog()
 

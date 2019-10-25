@@ -91,7 +91,7 @@ Public Class Gastos
 
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@fecha", gasto.Fecha)
-            objComando.Parameters.AddWithValue("@Nro_factura", gasto.Nfactura)
+            objComando.Parameters.AddWithValue("@Nfactura", gasto.Nfactura)
             objComando.Parameters.AddWithValue("@descripcion", gasto.Descripcion)
             objComando.Parameters.AddWithValue("@monto", gasto.Monto)
 
