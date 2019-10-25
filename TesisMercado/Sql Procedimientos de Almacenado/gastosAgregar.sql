@@ -1,7 +1,7 @@
 USE [mercadosantaritaSQL]
 GO
 
-/****** Object:  StoredProcedure [dbo].[gastosAgregar]    Script Date: 10/07/2019 18:21:57 ******/
+/****** Object:  StoredProcedure [dbo].[GastosAgregar]    Script Date: 10/25/2019 17:28:15 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -9,26 +9,19 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
+CREATE PROCEDURE [dbo].[GastosAgregar]
 
-CREATE PROCEDURE [dbo].[gastosAgregar] 
-
-@Nro_factura int,
-@monto int,
 @fecha datetime,
-@pago int,
-@fecha_pago datetime,
-@id_proveedor int
-	
+@Nfactura int,
+@Descripcion nvarchar(100),
+@Monto decimal(10,2)
 AS
 BEGIN
-
+	
 	SET NOCOUNT ON;
-
-  INSERT INTO gastos(Nro_factura,monto,fecha,pago,fecha_pago,id_proveedor)
-  VALUES (@Nro_factura,@monto,@fecha,@pago,@fecha_pago,@id_proveedor)
-
+ INSERT INTO Gastos(fecha ,Nfactura,Descripcion ,Monto )
+  VALUES (@fecha,@Nfactura ,@Descripcion ,@Monto)
 END
-
 
 GO
 

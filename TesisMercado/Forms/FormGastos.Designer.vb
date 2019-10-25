@@ -23,13 +23,13 @@ Partial Class FormGastos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.dgvGastos = New System.Windows.Forms.DataGridView
         Me.Labelfecha = New System.Windows.Forms.Label
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.BtnCerrar = New System.Windows.Forms.Button
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dtpFecha
@@ -40,13 +40,13 @@ Partial Class FormGastos
         Me.dtpFecha.Size = New System.Drawing.Size(200, 20)
         Me.dtpFecha.TabIndex = 2
         '
-        'DataGridView1
+        'dgvGastos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 46)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(476, 373)
-        Me.DataGridView1.TabIndex = 5
+        Me.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvGastos.Location = New System.Drawing.Point(12, 46)
+        Me.dgvGastos.Name = "dgvGastos"
+        Me.dgvGastos.Size = New System.Drawing.Size(476, 373)
+        Me.dgvGastos.TabIndex = 5
         '
         'Labelfecha
         '
@@ -122,18 +122,18 @@ Partial Class FormGastos
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Labelfecha)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvGastos)
         Me.Controls.Add(Me.dtpFecha)
         Me.Name = "FormGastos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LstGastos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvGastos As System.Windows.Forms.DataGridView
     Friend WithEvents Labelfecha As System.Windows.Forms.Label
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents btnModificar As System.Windows.Forms.Button

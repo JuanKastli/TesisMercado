@@ -31,6 +31,8 @@ Partial Class FormGastosDetalle
         Me.txtmonto = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtnfactura = New System.Windows.Forms.TextBox
+        Me.TxtId = New System.Windows.Forms.TextBox
+        Me.LabelID = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'btnAceptar
@@ -79,7 +81,7 @@ Partial Class FormGastosDetalle
         'dtpfecha
         '
         Me.dtpfecha.Enabled = False
-        Me.dtpfecha.Location = New System.Drawing.Point(47, 32)
+        Me.dtpfecha.Location = New System.Drawing.Point(44, 12)
         Me.dtpfecha.Name = "dtpfecha"
         Me.dtpfecha.Size = New System.Drawing.Size(200, 20)
         Me.dtpfecha.TabIndex = 5
@@ -107,11 +109,30 @@ Partial Class FormGastosDetalle
         Me.txtnfactura.Size = New System.Drawing.Size(162, 20)
         Me.txtnfactura.TabIndex = 8
         '
+        'TxtId
+        '
+        Me.TxtId.Enabled = False
+        Me.TxtId.Location = New System.Drawing.Point(110, 40)
+        Me.TxtId.Name = "TxtId"
+        Me.TxtId.Size = New System.Drawing.Size(100, 20)
+        Me.TxtId.TabIndex = 9
+        '
+        'LabelID
+        '
+        Me.LabelID.AutoSize = True
+        Me.LabelID.Location = New System.Drawing.Point(86, 47)
+        Me.LabelID.Name = "LabelID"
+        Me.LabelID.Size = New System.Drawing.Size(18, 13)
+        Me.LabelID.TabIndex = 10
+        Me.LabelID.Text = "ID"
+        '
         'FormGastosDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 222)
+        Me.Controls.Add(Me.LabelID)
+        Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.txtnfactura)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtmonto)
@@ -136,4 +157,6 @@ Partial Class FormGastosDetalle
     Friend WithEvents txtmonto As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtnfactura As System.Windows.Forms.TextBox
+    Friend WithEvents TxtId As System.Windows.Forms.TextBox
+    Friend WithEvents LabelID As System.Windows.Forms.Label
 End Class

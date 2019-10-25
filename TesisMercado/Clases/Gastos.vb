@@ -10,6 +10,7 @@ Public Class Gastos
 
 
 
+
     Public Property Id() As Integer
         Get
             Return Id_
@@ -139,7 +140,7 @@ Public Class Gastos
 
             Dim sqlComando As New SqlCommand("GastosEliminar", objConexion)
             sqlComando.CommandType = CommandType.StoredProcedure
-            sqlComando.Parameters.AddWithValue("@Id", Id)
+            sqlComando.Parameters.AddWithValue("@Id", gasto.Id)
 
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
