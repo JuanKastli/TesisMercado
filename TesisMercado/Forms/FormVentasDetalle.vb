@@ -17,7 +17,7 @@ Public Class FormVentasDetalle
    
     Private Sub FormVentasDetalle_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'LlenarTabla(DataGridView1)
+        Ventas.VentasLlenarTabla(DataGridView1)
 
     End Sub
 End Class

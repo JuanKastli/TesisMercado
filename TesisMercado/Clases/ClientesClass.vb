@@ -2,11 +2,14 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Public Class ClientesClass
-    'total de cuenta decimal y habilitacion checkbox
+    'habilitacion checkbox
 
     Inherits Conexion
-    Dim Id_, telefono_ As Integer
+    Dim Id_ As Integer
+    Dim telefono_ As Long
     Dim nombre_, apellido_, direccion_ As String
+    Dim CuentaTotal_ As Decimal
+    Dim habilitado_ As String
 
     Public Property Id() As Integer
         Get
@@ -17,11 +20,11 @@ Public Class ClientesClass
         End Set
     End Property
 
-    Public Property telefono() As Integer
+    Public Property telefono() As Long
         Get
             Return telefono_
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As Long)
             telefono_ = value
         End Set
     End Property
@@ -50,6 +53,22 @@ Public Class ClientesClass
         End Get
         Set(ByVal value As String)
             direccion_ = value
+        End Set
+    End Property
+    Public Property CuentaTotal() As Decimal
+        Get
+            Return CuentaTotal_
+        End Get
+        Set(ByVal value As Decimal)
+            CuentaTotal_ = value
+        End Set
+    End Property
+    Public Property habilitado() As String
+        Get
+            Return habilitado_
+        End Get
+        Set(ByVal value As String)
+            habilitado_ = value
         End Set
     End Property
 
@@ -91,6 +110,8 @@ Public Class ClientesClass
             objComando.Parameters.AddWithValue("@apellido", clientes.apellido)
             objComando.Parameters.AddWithValue("@direccion", clientes.direccion)
             objComando.Parameters.AddWithValue("@telefono", clientes.telefono)
+            objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
+            objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
 
             If objComando.ExecuteNonQuery Then
 
@@ -120,6 +141,8 @@ Public Class ClientesClass
             objComando.Parameters.AddWithValue("@apellido", clientes.apellido)
             objComando.Parameters.AddWithValue("@direccion", clientes.direccion)
             objComando.Parameters.AddWithValue("@telefono", clientes.telefono)
+            objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
+            objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
 
             objComando.ExecuteNonQuery()
 

@@ -44,6 +44,8 @@ Public Class FormClientesDetalle
         pro.apellido = ""
         pro.direccion = Nothing
         pro.telefono = Nothing
+        pro.CuentaTotal = 0
+        pro.habilitado = Nothing
 
         pro_ = pro
         esNuevo = True
@@ -57,6 +59,8 @@ Public Class FormClientesDetalle
         txtApellido.Text = pro.apellido
         txtDireccion.Text = pro.direccion
         txtTelefono.Text = pro.telefono
+        txtCuentaTotal.Text = pro.CuentaTotal
+
     End Sub
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
@@ -72,6 +76,7 @@ Public Class FormClientesDetalle
             pro.apellido = txtApellido.Text
             pro.direccion = txtDireccion.Text
             pro.telefono = txtTelefono.Text
+            pro.CuentaTotal = txtCuentaTotal.Text
 
             If esNuevo Then
 
@@ -94,6 +99,8 @@ Public Class FormClientesDetalle
         Close()
 
     End Sub
+
+
 
     'Private Sub txtId_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtId.KeyPress
 
@@ -153,5 +160,19 @@ Public Class FormClientesDetalle
     End Sub
 
 
+    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+        Dim Elija As String
+
+        If RadioButton1.Checked = True Then
+
+            Elija = RadioButton1.Text
+
+        ElseIf RadioButton2.Checked = True Then
+
+            Elija = RadioButton2.Text
+        End If
+
+        MsgBox("Usted eligió  " & Elija)
+    End Sub
 End Class
 
