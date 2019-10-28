@@ -77,6 +77,7 @@ Public Class FormClientesDetalle
             pro.direccion = txtDireccion.Text
             pro.telefono = txtTelefono.Text
             pro.CuentaTotal = txtCuentaTotal.Text
+            pro.habilitado = RadioButton1.Text
 
             If esNuevo Then
 

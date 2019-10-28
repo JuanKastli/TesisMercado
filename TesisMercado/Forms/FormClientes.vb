@@ -18,7 +18,7 @@ Public Class FormClientes
         Dim FormClientesDetalle As New FormClientesDetalle
 
         FormClientesDetalle.ShowDialog()
-        'ClientesLlenarTabla(DataGridView1)
+        Clientes.ClientesConsultar(DataGridView1)
 
     End Sub
 
@@ -32,7 +32,7 @@ Public Class FormClientes
 
         Dim FormClientesDetalle As New FormClientesDetalle(clientes)
         FormClientesDetalle.ShowDialog()
-        'ClientesLlenarTabla(DataGridView1)
+        Clientes.ClientesConsultar(DataGridView1)
 
     End Sub
 
@@ -44,7 +44,7 @@ Public Class FormClientes
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             Clientes.Eliminar(Clientes.Id)
-            'ClientesLlenarTabla(DataGridView1)
+            Clientes.ClientesConsultar(DataGridView1)
 
         End If
 
