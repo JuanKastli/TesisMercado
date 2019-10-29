@@ -115,50 +115,50 @@ Public Class FormClientesDetalle
 
     'End Sub
 
-    Private Sub txtNombre_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNombre.KeyPress
+    'Private Sub txtNombre_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNombre.KeyPress
 
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
-    End Sub
+    '    If Char.IsLetter(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtApellido_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtApellido.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
+    'Private Sub txtApellido_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtApellido.KeyPress
+    '    If Char.IsLetter(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub txtDireccion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDireccion.KeyPress
+    'Private Sub txtDireccion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDireccion.KeyPress
 
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
+    '    If Char.IsLetter(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
+    'Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress
+    '    If Char.IsDigit(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '    End If
 
-    End Sub
+    'End Sub
 
 
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
