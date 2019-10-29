@@ -30,7 +30,7 @@ Partial Class FormVentas
         Me.Label5 = New System.Windows.Forms.Label
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.ComboCliente = New System.Windows.Forms.ComboBox
+        Me.CmbCliente = New System.Windows.Forms.ComboBox
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.ComboComprobante = New System.Windows.Forms.ComboBox
@@ -147,7 +147,7 @@ Partial Class FormVentas
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Controls.Add(Me.ComboCliente)
+        Me.GroupBox1.Controls.Add(Me.CmbCliente)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -161,13 +161,13 @@ Partial Class FormVentas
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de la Venta"
         '
-        'ComboCliente
+        'CmbCliente
         '
-        Me.ComboCliente.FormattingEnabled = True
-        Me.ComboCliente.Location = New System.Drawing.Point(275, 19)
-        Me.ComboCliente.Name = "ComboCliente"
-        Me.ComboCliente.Size = New System.Drawing.Size(104, 21)
-        Me.ComboCliente.TabIndex = 32
+        Me.CmbCliente.FormattingEnabled = True
+        Me.CmbCliente.Location = New System.Drawing.Point(275, 19)
+        Me.CmbCliente.Name = "CmbCliente"
+        Me.CmbCliente.Size = New System.Drawing.Size(104, 21)
+        Me.CmbCliente.TabIndex = 32
         '
         'DateTimePicker2
         '
@@ -473,7 +473,7 @@ Partial Class FormVentas
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents ComboCliente As System.Windows.Forms.ComboBox
+    Friend WithEvents CmbCliente As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label

@@ -5,7 +5,7 @@ Public Class FormVentas
 
     Dim Venta As New ventaClass
     Private comprobante As New FacturacionClass
-    Private pro As New productosClass
+    'Private pro As New productosClass
     Private vent_ As ventaClass
     Private esNuevo_ As Boolean
 
@@ -34,17 +34,22 @@ Public Class FormVentas
         Close()
 
     End Sub
+    Dim idCliente As New ClientesClass
 
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
         txtIdVenta.Text = Venta.Id
+        idCliente.CargarComboCliente(CmbCliente)
+        CmbCliente.SelectedValue = Venta.id_cliente
+
         txtIdComprobante.Text = comprobante.id
 
 
-        txtDescripcion.Text = pro.nombre
-        txtIdProducto.Text = pro.Id
-        txtCantidad.Text = pro.cantidad
+
+        'txtDescripcion.Text = Venta.nombre
+        'txtIdProducto.Text = Venta.Id
+        'txtCantidad.Text = Venta.cantidad
 
 
 
@@ -79,4 +84,7 @@ Public Class FormVentas
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
     End Sub
+
+  
+    
 End Class

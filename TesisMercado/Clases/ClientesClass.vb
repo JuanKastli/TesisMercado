@@ -171,4 +171,21 @@ Public Class ClientesClass
         End Try
 
     End Sub
+
+    Public Sub CargarComboCliente(ByVal combo As ComboBox)
+        Abrir()
+        Dim objComando As New SqlCommand("CargarCliente", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        Dim objdatatable As New Data.DataTable
+        Dim objdataAdapter As New SqlDataAdapter(objComando)
+        objdataAdapter.Fill(objdatatable)
+        With combo
+            .DataSource = objdatatable
+            .DisplayMember = "nombreApellido"
+            .ValueMember = "id"
+
+        End With
+        Cerrar()
+    End Sub
+
 End Class

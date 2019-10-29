@@ -173,7 +173,7 @@ Public Class FormClientesDetalle
             Elija = RadioButton2.Text
         End If
 
-        MsgBox("Usted eligió  " & Elija)
+        'MsgBox("Usted eligió  " & Elija)
     End Sub
 End Class
 

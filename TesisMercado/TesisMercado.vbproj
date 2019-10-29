@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClientesClass.vb" />
+    <Compile Include="Clases\ComprobantesClass.vb" />
     <Compile Include="Clases\Conexion.vb" />
     <Compile Include="Clases\detalle_ventaClass.vb" />
     <Compile Include="Clases\FacturacionClass.vb" />
