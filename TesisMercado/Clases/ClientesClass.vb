@@ -9,7 +9,7 @@ Public Class ClientesClass
     Dim telefono_ As Long
     Dim nombre_, apellido_, direccion_ As String
     Dim CuentaTotal_ As Decimal
-    Dim habilitado_ As String
+    Dim habilitado_, nombreyapellido_ As String
 
     Public Property Id() As Integer
         Get
@@ -69,6 +69,14 @@ Public Class ClientesClass
         End Get
         Set(ByVal value As String)
             habilitado_ = value
+        End Set
+    End Property
+    Public Property nombreyapellido() As String
+        Get
+            Return nombreyapellido_
+        End Get
+        Set(ByVal value As String)
+            nombreyapellido_ = value
         End Set
     End Property
 
@@ -181,7 +189,7 @@ Public Class ClientesClass
         objdataAdapter.Fill(objdatatable)
         With combo
             .DataSource = objdatatable
-            .DisplayMember = "nombreApellido"
+            .DisplayMember = "nombreyApellido"
             .ValueMember = "id"
 
         End With
