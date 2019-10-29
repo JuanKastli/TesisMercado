@@ -62,9 +62,9 @@ Partial Class FormGastos
         'btnAgregar
         '
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.BackColor = System.Drawing.Color.Black
-        Me.btnAgregar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnAgregar.Location = New System.Drawing.Point(12, 451)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 42)
@@ -75,9 +75,9 @@ Partial Class FormGastos
         'btnModificar
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnModificar.BackColor = System.Drawing.Color.Black
-        Me.btnModificar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnModificar.Location = New System.Drawing.Point(134, 451)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 42)
@@ -88,9 +88,9 @@ Partial Class FormGastos
         'btnBorrar
         '
         Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBorrar.BackColor = System.Drawing.Color.Black
-        Me.btnBorrar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnBorrar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnBorrar.Location = New System.Drawing.Point(260, 451)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(93, 42)
@@ -101,9 +101,9 @@ Partial Class FormGastos
         'BtnCerrar
         '
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.BackColor = System.Drawing.Color.Black
-        Me.BtnCerrar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.BtnCerrar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.BtnCerrar.Location = New System.Drawing.Point(395, 451)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(93, 42)
@@ -115,7 +115,7 @@ Partial Class FormGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(507, 505)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.btnBorrar)

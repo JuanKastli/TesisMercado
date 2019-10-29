@@ -162,6 +162,7 @@ Public Class FormClientesDetalle
 
 
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+
         Dim Elija As String
 
         If RadioButton1.Checked = True Then

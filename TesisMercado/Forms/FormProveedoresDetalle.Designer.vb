@@ -98,14 +98,14 @@ Partial Class FormProveedoresDetalle
         '
         Me.txtTelefono.Location = New System.Drawing.Point(75, 154)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(182, 20)
         Me.txtTelefono.TabIndex = 19
         '
         'txtLocalidad
         '
         Me.txtLocalidad.Location = New System.Drawing.Point(75, 119)
         Me.txtLocalidad.Name = "txtLocalidad"
-        Me.txtLocalidad.Size = New System.Drawing.Size(145, 20)
+        Me.txtLocalidad.Size = New System.Drawing.Size(182, 20)
         Me.txtLocalidad.TabIndex = 18
         Me.txtLocalidad.Tag = "*"
         '
@@ -113,14 +113,14 @@ Partial Class FormProveedoresDetalle
         '
         Me.txtDireccion.Location = New System.Drawing.Point(75, 83)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(182, 20)
         Me.txtDireccion.TabIndex = 17
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(75, 47)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(145, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(182, 20)
         Me.txtNombre.TabIndex = 16
         Me.txtNombre.Tag = "*"
         '
@@ -135,24 +135,24 @@ Partial Class FormProveedoresDetalle
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnCancelar.Location = New System.Drawing.Point(170, 211)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(101, 36)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 21
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAceptar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnAceptar.Location = New System.Drawing.Point(16, 211)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(101, 36)
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
         Me.btnAceptar.TabIndex = 20
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
@@ -166,7 +166,7 @@ Partial Class FormProveedoresDetalle
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(281, 258)
+        Me.ClientSize = New System.Drawing.Size(296, 258)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtTelefono)

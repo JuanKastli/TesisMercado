@@ -1,5 +1,4 @@
-﻿
-Public Class ProduProveForm
+﻿Public Class ProduProveForm
 
     Dim ProduProve As New ProductoPorProveedor
     Private producto_ As New productosClass

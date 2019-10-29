@@ -3,6 +3,21 @@ Imports System.Data.SqlClient
 
 Public Class FormProductos
 
+    Private listaProductos_ As List(Of productosClass)
+
+    Public Property listaProductos() As List(Of productosClass)
+        Get
+            Return listaProductos_
+        End Get
+        Set(ByVal value As List(Of productosClass))
+            listaProductos_ = value
+        End Set
+    End Property
+    Public Sub New(ByRef lisProductos As List(Of productosClass))
+        InitializeComponent()
+        listaProductos = lisProductos
+    End Sub
+
     Dim Producto As New productosClass
 
 
@@ -27,5 +42,21 @@ Public Class FormProductos
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+
+        For Each Producto As DataGridViewRow In dgvProductos.SelectedRows
+            Dim productos As New productosClass
+
+            productos.Id = Producto.Cells("id").Value
+            productos.nombre = Producto.Cells("nombre").Value
+            productos.cantidad = Producto.Cells("telefono").Value
+            productos.Precio = Producto.Cells("direccion").Value
+
+
+            listaProductos.Add(productos)
+        Next
+        Close()
     End Sub
 End Class

@@ -53,7 +53,7 @@ Public Class FormClientes
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
-        Close()
+        Me.Close()
 
     End Sub
 

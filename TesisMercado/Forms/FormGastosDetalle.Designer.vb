@@ -37,33 +37,39 @@ Partial Class FormGastosDetalle
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(12, 175)
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAceptar.Location = New System.Drawing.Point(110, 131)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
         Me.btnAceptar.TabIndex = 0
         Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
+        Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(197, 175)
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnCancelar.Location = New System.Drawing.Point(316, 131)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 1
         Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'txtdescripcion
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(110, 92)
+        Me.txtdescripcion.Location = New System.Drawing.Point(110, 67)
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(162, 20)
+        Me.txtdescripcion.Size = New System.Drawing.Size(251, 20)
         Me.txtdescripcion.TabIndex = 2
         '
         'LabelDescripcion
         '
         Me.LabelDescripcion.AutoSize = True
-        Me.LabelDescripcion.Location = New System.Drawing.Point(41, 95)
+        Me.LabelDescripcion.Location = New System.Drawing.Point(41, 70)
         Me.LabelDescripcion.Name = "LabelDescripcion"
         Me.LabelDescripcion.Size = New System.Drawing.Size(63, 13)
         Me.LabelDescripcion.TabIndex = 3
@@ -72,7 +78,7 @@ Partial Class FormGastosDetalle
         'LabelMonto
         '
         Me.LabelMonto.AutoSize = True
-        Me.LabelMonto.Location = New System.Drawing.Point(67, 121)
+        Me.LabelMonto.Location = New System.Drawing.Point(67, 96)
         Me.LabelMonto.Name = "LabelMonto"
         Me.LabelMonto.Size = New System.Drawing.Size(37, 13)
         Me.LabelMonto.TabIndex = 4
@@ -81,22 +87,22 @@ Partial Class FormGastosDetalle
         'dtpfecha
         '
         Me.dtpfecha.Enabled = False
-        Me.dtpfecha.Location = New System.Drawing.Point(44, 12)
+        Me.dtpfecha.Location = New System.Drawing.Point(228, 12)
         Me.dtpfecha.Name = "dtpfecha"
         Me.dtpfecha.Size = New System.Drawing.Size(200, 20)
         Me.dtpfecha.TabIndex = 5
         '
         'txtmonto
         '
-        Me.txtmonto.Location = New System.Drawing.Point(110, 118)
+        Me.txtmonto.Location = New System.Drawing.Point(110, 93)
         Me.txtmonto.Name = "txtmonto"
-        Me.txtmonto.Size = New System.Drawing.Size(162, 20)
+        Me.txtmonto.Size = New System.Drawing.Size(251, 20)
         Me.txtmonto.TabIndex = 6
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 64)
+        Me.Label1.Location = New System.Drawing.Point(9, 39)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 13)
         Me.Label1.TabIndex = 7
@@ -104,15 +110,15 @@ Partial Class FormGastosDetalle
         '
         'txtnfactura
         '
-        Me.txtnfactura.Location = New System.Drawing.Point(110, 66)
+        Me.txtnfactura.Location = New System.Drawing.Point(110, 41)
         Me.txtnfactura.Name = "txtnfactura"
-        Me.txtnfactura.Size = New System.Drawing.Size(162, 20)
+        Me.txtnfactura.Size = New System.Drawing.Size(251, 20)
         Me.txtnfactura.TabIndex = 8
         '
         'TxtId
         '
         Me.TxtId.Enabled = False
-        Me.TxtId.Location = New System.Drawing.Point(110, 40)
+        Me.TxtId.Location = New System.Drawing.Point(110, 15)
         Me.TxtId.Name = "TxtId"
         Me.TxtId.Size = New System.Drawing.Size(100, 20)
         Me.TxtId.TabIndex = 9
@@ -120,7 +126,7 @@ Partial Class FormGastosDetalle
         'LabelID
         '
         Me.LabelID.AutoSize = True
-        Me.LabelID.Location = New System.Drawing.Point(86, 47)
+        Me.LabelID.Location = New System.Drawing.Point(86, 15)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(18, 13)
         Me.LabelID.TabIndex = 10
@@ -130,7 +136,7 @@ Partial Class FormGastosDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 222)
+        Me.ClientSize = New System.Drawing.Size(440, 183)
         Me.Controls.Add(Me.LabelID)
         Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.txtnfactura)
