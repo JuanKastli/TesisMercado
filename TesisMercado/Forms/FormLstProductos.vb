@@ -3,69 +3,41 @@ Imports System.Data.SqlClient
 
 Public Class FormLstProductos
 
-    'Inherits Conexion
-    'Private producto_ As New productosClass
 
-    'Public Property producto() As productosClass
-    '    Get
-    '        Return producto_
-    '    End Get
-    '    Set(ByVal value As productosClass)
-    '        producto_ = value
-    '    End Set
-    'End Property
+    Private producto_ As New productosClass
 
-    'Dim Pro As New productosClass
+    Public Property producto() As productosClass
+        Get
+            Return producto_
+        End Get
+        Set(ByVal value As productosClass)
+            producto_ = value
+        End Set
+    End Property
 
-    'Private Sub FormLstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Dim Pro As New productosClass
 
-    '    ConsultarProducto(DataGridView1)
+    Private Sub FormLstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    'End Sub
 
-    'Public Sub ConsultarProducto(ByVal listado As DataGridView)
-    '    Try
-    '        Abrir()
+        producto.ConsultarProducto(DataGridView1)
 
-    '        Dim objComando As New SqlCommand("ConsultarProducto", objConexion)
-    '        objComando.CommandType = CommandType.StoredProcedure
+    End Sub
 
-    '        If objComando.ExecuteNonQuery Then
-    '            Dim objDataAdapter As New SqlDataAdapter(objComando)
-    '            Dim objDataTable As New Data.DataTable
-    '            objDataAdapter.Fill(objDataTable)
-    '            If objDataTable.Rows.Count > 0 Then
-    '                listado.DataSource = objDataTable
-    '                listado.Columns("id").Width = 50
-    '                'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-    '                listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-    '            Else
-    '                listado.DataSource = Nothing
-    '            End If
-    '        End If
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    Finally
-    '        Cerrar()
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
 
-    '    End Try
+        producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
+        producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
+        producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
+        producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
+        Close()
+    End Sub
 
-    'End Sub
+    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
-    'Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Close()
 
-    '    producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
-    '    producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
-    '    producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
-    '    producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
-    '    Close()
-    'End Sub
-
-    'Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-
-    '    Close()
-
-    'End Sub
+    End Sub
 
 End Class

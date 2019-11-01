@@ -5,7 +5,7 @@ Public Class FormVentas
 
     Dim Venta As New ventaClass
     Private comprobante As New FacturacionClass
-    'Private pro As New productosClass
+    Private pro As New productosClass
     Private vent_ As ventaClass
     Private esNuevo_ As Boolean
 
@@ -58,9 +58,9 @@ Public Class FormVentas
     Public Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
 
 
-        'Dim FormProductos As New FormProductos
+        Dim FormLstProductos As New FormLstProductos
 
-        'FormProductos.ShowDialog()
+        FormLstProductos.ShowDialog()
 
 
         ' txtIdProducto.Text = FormProductos.producto.Id

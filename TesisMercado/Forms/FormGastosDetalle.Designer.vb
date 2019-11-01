@@ -43,7 +43,7 @@ Partial Class FormGastosDetalle
         Me.btnAceptar.Location = New System.Drawing.Point(110, 131)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
-        Me.btnAceptar.TabIndex = 0
+        Me.btnAceptar.TabIndex = 4
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
@@ -55,7 +55,7 @@ Partial Class FormGastosDetalle
         Me.btnCancelar.Location = New System.Drawing.Point(316, 131)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
-        Me.btnCancelar.TabIndex = 1
+        Me.btnCancelar.TabIndex = 5
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -97,7 +97,7 @@ Partial Class FormGastosDetalle
         Me.txtmonto.Location = New System.Drawing.Point(110, 93)
         Me.txtmonto.Name = "txtmonto"
         Me.txtmonto.Size = New System.Drawing.Size(251, 20)
-        Me.txtmonto.TabIndex = 6
+        Me.txtmonto.TabIndex = 3
         '
         'Label1
         '
@@ -113,7 +113,7 @@ Partial Class FormGastosDetalle
         Me.txtnfactura.Location = New System.Drawing.Point(110, 41)
         Me.txtnfactura.Name = "txtnfactura"
         Me.txtnfactura.Size = New System.Drawing.Size(251, 20)
-        Me.txtnfactura.TabIndex = 8
+        Me.txtnfactura.TabIndex = 1
         '
         'TxtId
         '

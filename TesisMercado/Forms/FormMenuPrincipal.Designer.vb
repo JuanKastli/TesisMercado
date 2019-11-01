@@ -30,7 +30,7 @@ Partial Class FormMenuPrincipal
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.StockDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.GastosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.PanelContenedor = New System.Windows.Forms.Panel
         Me.Label1 = New System.Windows.Forms.Label
@@ -45,7 +45,7 @@ Partial Class FormMenuPrincipal
         Me.MenuStrip1.BackColor = System.Drawing.Color.Green
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.ServiciosToolStripMenuItem, Me.UsuariosToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.GastosToolStripMenuItem, Me.UsuariosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(105, 698)
@@ -101,15 +101,15 @@ Partial Class FormMenuPrincipal
         Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(99, 130)
         Me.ClientesToolStripMenuItem1.Text = "Clientes"
         '
-        'ServiciosToolStripMenuItem
+        'GastosToolStripMenuItem
         '
-        Me.ServiciosToolStripMenuItem.AutoSize = False
-        Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.Color.Green
-        Me.ServiciosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ServiciosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
-        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
-        Me.ServiciosToolStripMenuItem.Text = "Gastos"
+        Me.GastosToolStripMenuItem.AutoSize = False
+        Me.GastosToolStripMenuItem.BackColor = System.Drawing.Color.Green
+        Me.GastosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GastosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GastosToolStripMenuItem.Name = "GastosToolStripMenuItem"
+        Me.GastosToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
+        Me.GastosToolStripMenuItem.Text = "Gastos"
         '
         'UsuariosToolStripMenuItem
         '
@@ -181,7 +181,7 @@ Partial Class FormMenuPrincipal
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GastosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RubrosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem

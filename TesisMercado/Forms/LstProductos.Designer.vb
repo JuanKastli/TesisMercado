@@ -39,7 +39,7 @@ Partial Class LstProductos
         Me.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCerrar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCerrar.Location = New System.Drawing.Point(678, 609)
+        Me.btnCerrar.Location = New System.Drawing.Point(690, 609)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(112, 39)
         Me.btnCerrar.TabIndex = 17

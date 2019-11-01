@@ -60,6 +60,7 @@ Public Class FormClientesDetalle
         txtDireccion.Text = pro.direccion
         txtTelefono.Text = pro.telefono
         txtCuentaTotal.Text = pro.CuentaTotal
+        pro.habilitado = RadioButton1.Text
 
     End Sub
 
@@ -97,7 +98,7 @@ Public Class FormClientesDetalle
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
-        Close()
+        Me.Close()
 
     End Sub
 

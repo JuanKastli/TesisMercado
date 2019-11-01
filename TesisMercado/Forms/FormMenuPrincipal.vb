@@ -22,8 +22,9 @@
         'FormClientes.Show()
     End Sub
 
-    Private Sub ServiciosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ServiciosToolStripMenuItem.Click
-        FormGastos.Show()
+    Private Sub ServiciosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GastosToolStripMenuItem.Click
+        AbrirFormHijo(New FormGastos)
+        'FormGastos.Show()
     End Sub
 
     Private Sub UsuariosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UsuariosToolStripMenuItem.Click

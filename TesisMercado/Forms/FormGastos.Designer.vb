@@ -29,31 +29,37 @@ Partial Class FormGastos
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.BtnCerrar = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dtpFecha
         '
+        Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Location = New System.Drawing.Point(260, 7)
+        Me.dtpFecha.Location = New System.Drawing.Point(602, 9)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(200, 20)
         Me.dtpFecha.TabIndex = 2
         '
         'dgvGastos
         '
+        Me.dgvGastos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGastos.Location = New System.Drawing.Point(12, 46)
+        Me.dgvGastos.Location = New System.Drawing.Point(12, 37)
         Me.dgvGastos.Name = "dgvGastos"
-        Me.dgvGastos.Size = New System.Drawing.Size(476, 373)
+        Me.dgvGastos.Size = New System.Drawing.Size(790, 566)
         Me.dgvGastos.TabIndex = 5
         '
         'Labelfecha
         '
+        Me.Labelfecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Labelfecha.AutoSize = True
         Me.Labelfecha.BackColor = System.Drawing.Color.Transparent
-        Me.Labelfecha.ForeColor = System.Drawing.Color.White
-        Me.Labelfecha.Location = New System.Drawing.Point(206, 14)
+        Me.Labelfecha.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Labelfecha.Location = New System.Drawing.Point(559, 15)
         Me.Labelfecha.Name = "Labelfecha"
         Me.Labelfecha.Size = New System.Drawing.Size(37, 13)
         Me.Labelfecha.TabIndex = 9
@@ -61,39 +67,39 @@ Partial Class FormGastos
         '
         'btnAgregar
         '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 451)
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 609)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(93, 42)
+        Me.btnAgregar.Size = New System.Drawing.Size(112, 39)
         Me.btnAgregar.TabIndex = 16
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'btnModificar
         '
-        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnModificar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnModificar.Location = New System.Drawing.Point(134, 451)
+        Me.btnModificar.Location = New System.Drawing.Point(130, 609)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 42)
+        Me.btnModificar.Size = New System.Drawing.Size(112, 39)
         Me.btnModificar.TabIndex = 17
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
         'btnBorrar
         '
-        Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBorrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBorrar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnBorrar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnBorrar.Location = New System.Drawing.Point(260, 451)
+        Me.btnBorrar.Location = New System.Drawing.Point(248, 609)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(93, 42)
+        Me.btnBorrar.Size = New System.Drawing.Size(112, 39)
         Me.btnBorrar.TabIndex = 18
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
@@ -104,19 +110,33 @@ Partial Class FormGastos
         Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.BtnCerrar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.BtnCerrar.Location = New System.Drawing.Point(395, 451)
+        Me.BtnCerrar.Location = New System.Drawing.Point(690, 609)
         Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(93, 42)
+        Me.BtnCerrar.Size = New System.Drawing.Size(112, 39)
         Me.BtnCerrar.TabIndex = 19
-        Me.BtnCerrar.Text = "Cerrar"
+        Me.BtnCerrar.Text = "Volver"
         Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Black
+        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 25)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Gastos"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'FormGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(507, 505)
+        Me.ClientSize = New System.Drawing.Size(814, 660)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
@@ -125,7 +145,6 @@ Partial Class FormGastos
         Me.Controls.Add(Me.dgvGastos)
         Me.Controls.Add(Me.dtpFecha)
         Me.Name = "FormGastos"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LstGastos"
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -139,4 +158,5 @@ Partial Class FormGastos
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents BtnCerrar As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
