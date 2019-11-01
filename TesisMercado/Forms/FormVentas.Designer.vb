@@ -346,7 +346,7 @@ Partial Class FormVentas
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(59, 441)
+        Me.Label1.Location = New System.Drawing.Point(19, 441)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(115, 13)
         Me.Label1.TabIndex = 41
@@ -355,7 +355,7 @@ Partial Class FormVentas
         'txtCantDeProd
         '
         Me.txtCantDeProd.Enabled = False
-        Me.txtCantDeProd.Location = New System.Drawing.Point(180, 434)
+        Me.txtCantDeProd.Location = New System.Drawing.Point(140, 434)
         Me.txtCantDeProd.Name = "txtCantDeProd"
         Me.txtCantDeProd.ReadOnly = True
         Me.txtCantDeProd.Size = New System.Drawing.Size(47, 20)
@@ -366,7 +366,7 @@ Partial Class FormVentas
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(233, 441)
+        Me.Label12.Location = New System.Drawing.Point(193, 441)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(71, 13)
         Me.Label12.TabIndex = 46
@@ -375,7 +375,7 @@ Partial Class FormVentas
         'TextBox8
         '
         Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(612, 434)
+        Me.TextBox8.Location = New System.Drawing.Point(634, 434)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(47, 20)
@@ -384,7 +384,7 @@ Partial Class FormVentas
         'txtTotal
         '
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(310, 434)
+        Me.txtTotal.Location = New System.Drawing.Point(270, 434)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
         Me.txtTotal.Size = New System.Drawing.Size(47, 20)
@@ -403,9 +403,8 @@ Partial Class FormVentas
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(452, 434)
+        Me.TextBox1.Location = New System.Drawing.Point(474, 434)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(75, 20)
         Me.TextBox1.TabIndex = 52
         '
@@ -414,7 +413,7 @@ Partial Class FormVentas
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(363, 441)
+        Me.Label2.Location = New System.Drawing.Point(385, 441)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 55
@@ -425,7 +424,7 @@ Partial Class FormVentas
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(540, 441)
+        Me.Label8.Location = New System.Drawing.Point(562, 441)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 13)
         Me.Label8.TabIndex = 56
