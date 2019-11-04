@@ -56,6 +56,7 @@ Partial Class FormVentas
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
+        Me.Button1 = New System.Windows.Forms.Button
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -68,9 +69,9 @@ Partial Class FormVentas
         Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnEliminar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnEliminar.Location = New System.Drawing.Point(687, 287)
+        Me.btnEliminar.Location = New System.Drawing.Point(672, 373)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(97, 90)
+        Me.btnEliminar.Size = New System.Drawing.Size(122, 55)
         Me.btnEliminar.TabIndex = 6
         Me.btnEliminar.Text = "Eliminar Producto"
         Me.btnEliminar.UseVisualStyleBackColor = False
@@ -81,11 +82,11 @@ Partial Class FormVentas
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCancelar.Location = New System.Drawing.Point(687, 475)
+        Me.btnCancelar.Location = New System.Drawing.Point(672, 483)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(92, 49)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 1
-        Me.btnCancelar.Text = "Cancelar Venta"
+        Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'Label3
@@ -93,7 +94,7 @@ Partial Class FormVentas
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(90, 76)
+        Me.Label3.Location = New System.Drawing.Point(146, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 13)
         Me.Label3.TabIndex = 31
@@ -104,7 +105,7 @@ Partial Class FormVentas
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(218, 24)
+        Me.Label4.Location = New System.Drawing.Point(178, 37)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(51, 13)
         Me.Label4.TabIndex = 29
@@ -113,7 +114,7 @@ Partial Class FormVentas
         'txtIdVenta
         '
         Me.txtIdVenta.Enabled = False
-        Me.txtIdVenta.Location = New System.Drawing.Point(138, 21)
+        Me.txtIdVenta.Location = New System.Drawing.Point(85, 37)
         Me.txtIdVenta.Name = "txtIdVenta"
         Me.txtIdVenta.ReadOnly = True
         Me.txtIdVenta.Size = New System.Drawing.Size(47, 20)
@@ -124,7 +125,7 @@ Partial Class FormVentas
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(85, 24)
+        Me.Label5.Location = New System.Drawing.Point(32, 40)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 13)
         Me.Label5.TabIndex = 24
@@ -136,11 +137,11 @@ Partial Class FormVentas
         Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAceptar.Location = New System.Drawing.Point(279, 469)
+        Me.btnAceptar.Location = New System.Drawing.Point(4, 483)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(218, 61)
+        Me.btnAceptar.Size = New System.Drawing.Size(177, 39)
         Me.btnAceptar.TabIndex = 7
-        Me.btnAceptar.Text = "Imprimir y Terminar"
+        Me.btnAceptar.Text = "Imprimir"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'GroupBox1
@@ -163,14 +164,15 @@ Partial Class FormVentas
         'CmbCliente
         '
         Me.CmbCliente.FormattingEnabled = True
-        Me.CmbCliente.Location = New System.Drawing.Point(275, 19)
+        Me.CmbCliente.Location = New System.Drawing.Point(235, 32)
         Me.CmbCliente.Name = "CmbCliente"
-        Me.CmbCliente.Size = New System.Drawing.Size(104, 21)
+        Me.CmbCliente.Size = New System.Drawing.Size(203, 21)
         Me.CmbCliente.TabIndex = 2
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(179, 73)
+        Me.DateTimePicker2.Enabled = False
+        Me.DateTimePicker2.Location = New System.Drawing.Point(235, 73)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(203, 20)
         Me.DateTimePicker2.TabIndex = 33
@@ -248,9 +250,9 @@ Partial Class FormVentas
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(521, 61)
+        Me.txtCantidad.Location = New System.Drawing.Point(549, 62)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(61, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(75, 20)
         Me.txtCantidad.TabIndex = 42
         '
         'btnAgregar
@@ -259,11 +261,11 @@ Partial Class FormVentas
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAgregar.Location = New System.Drawing.Point(588, 49)
+        Me.btnAgregar.Location = New System.Drawing.Point(658, 42)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(192, 43)
+        Me.btnAgregar.Size = New System.Drawing.Size(122, 55)
         Me.btnAgregar.TabIndex = 5
-        Me.btnAgregar.Text = "Agregar a la Lista"
+        Me.btnAgregar.Text = "Agregar Producto"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'btnBuscar
@@ -272,9 +274,9 @@ Partial Class FormVentas
         Me.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnBuscar.Location = New System.Drawing.Point(8, 38)
+        Me.btnBuscar.Location = New System.Drawing.Point(10, 43)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(134, 65)
+        Me.btnBuscar.Size = New System.Drawing.Size(122, 55)
         Me.btnBuscar.TabIndex = 4
         Me.btnBuscar.Text = "Buscar Producto"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -284,7 +286,7 @@ Partial Class FormVentas
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(469, 64)
+        Me.Label10.Location = New System.Drawing.Point(497, 65)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 13)
         Me.Label10.TabIndex = 38
@@ -307,7 +309,7 @@ Partial Class FormVentas
         Me.txtIdProducto.Location = New System.Drawing.Point(416, 61)
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.ReadOnly = True
-        Me.txtIdProducto.Size = New System.Drawing.Size(47, 20)
+        Me.txtIdProducto.Size = New System.Drawing.Size(75, 20)
         Me.txtIdProducto.TabIndex = 25
         '
         'Label7
@@ -337,7 +339,7 @@ Partial Class FormVentas
         Me.DataGridView1.Location = New System.Drawing.Point(4, 246)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(677, 182)
+        Me.DataGridView1.Size = New System.Drawing.Size(659, 182)
         Me.DataGridView1.TabIndex = 40
         '
         'Label1
@@ -345,7 +347,7 @@ Partial Class FormVentas
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(19, 441)
+        Me.Label1.Location = New System.Drawing.Point(11, 441)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(115, 13)
         Me.Label1.TabIndex = 41
@@ -354,10 +356,10 @@ Partial Class FormVentas
         'txtCantDeProd
         '
         Me.txtCantDeProd.Enabled = False
-        Me.txtCantDeProd.Location = New System.Drawing.Point(140, 434)
+        Me.txtCantDeProd.Location = New System.Drawing.Point(130, 438)
         Me.txtCantDeProd.Name = "txtCantDeProd"
         Me.txtCantDeProd.ReadOnly = True
-        Me.txtCantDeProd.Size = New System.Drawing.Size(47, 20)
+        Me.txtCantDeProd.Size = New System.Drawing.Size(51, 20)
         Me.txtCantDeProd.TabIndex = 42
         '
         'Label12
@@ -365,7 +367,7 @@ Partial Class FormVentas
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(193, 441)
+        Me.Label12.Location = New System.Drawing.Point(183, 441)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(71, 13)
         Me.Label12.TabIndex = 46
@@ -374,19 +376,19 @@ Partial Class FormVentas
         'TextBox8
         '
         Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(634, 434)
+        Me.TextBox8.Location = New System.Drawing.Point(594, 438)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(47, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(69, 20)
         Me.TextBox8.TabIndex = 47
         '
         'txtTotal
         '
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(270, 434)
+        Me.txtTotal.Location = New System.Drawing.Point(260, 438)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(47, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(67, 20)
         Me.txtTotal.TabIndex = 48
         '
         'Label13
@@ -402,7 +404,7 @@ Partial Class FormVentas
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(474, 434)
+        Me.TextBox1.Location = New System.Drawing.Point(440, 438)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(75, 20)
         Me.TextBox1.TabIndex = 52
@@ -412,7 +414,7 @@ Partial Class FormVentas
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(385, 441)
+        Me.Label2.Location = New System.Drawing.Point(351, 441)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 55
@@ -423,11 +425,24 @@ Partial Class FormVentas
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(562, 441)
+        Me.Label8.Location = New System.Drawing.Point(522, 441)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 13)
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Vuelto a Dar"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Button1.Location = New System.Drawing.Point(551, 483)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 39)
+        Me.Button1.TabIndex = 57
+        Me.Button1.Text = "Aceptar"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FormVentas
         '
@@ -435,6 +450,7 @@ Partial Class FormVentas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(796, 534)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
@@ -498,4 +514,5 @@ Partial Class FormVentas
     Friend WithEvents txtIdComprobante As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

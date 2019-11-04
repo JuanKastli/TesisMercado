@@ -25,6 +25,7 @@ Partial Class FormVentasDetalle
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.btnModificar = New System.Windows.Forms.Button
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,11 +66,25 @@ Partial Class FormVentasDetalle
         Me.DataGridView1.Size = New System.Drawing.Size(790, 578)
         Me.DataGridView1.TabIndex = 12
         '
+        'btnModificar
+        '
+        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnModificar.Location = New System.Drawing.Point(220, 596)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(93, 52)
+        Me.btnModificar.TabIndex = 13
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = False
+        '
         'FormVentasDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 660)
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
@@ -83,4 +98,5 @@ Partial Class FormVentasDetalle
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnModificar As System.Windows.Forms.Button
 End Class
