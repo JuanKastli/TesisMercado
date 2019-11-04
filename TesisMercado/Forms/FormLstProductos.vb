@@ -41,17 +41,10 @@ Public Class FormLstProductos
     End Sub
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
-        'For Each proveedor As DataGridViewRow In DataGridView1.SelectedRows
-        '    Dim proveedores As New ProveedoresClass
-
-        '    proveedores.Id = proveedor.Cells("id").Value
-        '    proveedores.Nombre = proveedor.Cells("nombre").Value
-        '    proveedores.Telefono = proveedor.Cells("telefono").Value
-        '    proveedores.Direccion = proveedor.Cells("direccion").Value
-        '    proveedores.Localidad = proveedor.Cells("localidad").Value
-
-        '    listaProveedores.Add(proveedores)
-        'Next
-        'Close()
+        producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
+        producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
+        producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
+        producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
+        Close()
     End Sub
 End Class

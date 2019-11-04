@@ -8,6 +8,7 @@ Public Class FormVentas
     Private pro As New productosClass
     Private vent_ As ventaClass
     Private esNuevo_ As Boolean
+    Dim func As New Funciones
 
 
     Private Property vent() As ventaClass
@@ -29,9 +30,23 @@ Public Class FormVentas
         End Set
     End Property
 
+    'constructor para agregar
+    Public Sub New()
+        InitializeComponent()
+
+        Dim pro As New productosClass
+
+        pro.Id = 0
+        pro.nombre = ""
+        pro.Precio = 0
+        'pro.cantidad = 1
+
+        esNuevo = True
+    End Sub
+
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
-        Close()
+        Me.Close()
 
     End Sub
     Dim idCliente As New ClientesClass
@@ -49,9 +64,10 @@ Public Class FormVentas
         ComboComprobante.SelectedValue = Venta.id_comprobante
 
 
-        'txtDescripcion.Text = Venta.nombre
-        'txtIdProducto.Text = Venta.Id
-        'txtCantidad.Text = Venta.cantidad
+        txtDescripcion.Text = pro.nombre
+        txtIdProducto.Text = pro.Id
+        txtCantidad.Text = pro.cantidad
+
 
 
 
@@ -65,8 +81,8 @@ Public Class FormVentas
         FormLstProductos.ShowDialog()
 
 
-        ' txtIdProducto.Text = FormProductos.producto.Id
-        ' txtDescripcion.Text = FormProductos.producto.nombre
+        txtIdProducto.Text = FormLstProductos.producto.Id
+        txtDescripcion.Text = FormLstProductos.producto.nombre
 
 
 
@@ -82,8 +98,21 @@ Public Class FormVentas
 
     End Sub
 
-
+    Dim ventas As New ventaClass
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+        For Each ventas As DataGridViewRow In DataGridView1.SelectedRows
+            'Dim venta As New productosClass
+
+            pro.Id = ventas.Cells("id").Value
+            pro.nombre = ventas.Cells("nombre").Value
+            pro.cantidad = ventas.Cells("cantidad").Value
+            pro.Precio = ventas.Cells("Precio").Value
+
+
+
+        Next
+
+
 
     End Sub
 
