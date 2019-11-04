@@ -123,7 +123,7 @@ Public Class ComprobantesClass
         objdataAdapter.Fill(objdatatable)
         With combo
             .DataSource = objdatatable
-            .DisplayMember = "nombreComprobante"
+            .DisplayMember = "Tipo"
             .ValueMember = "id"
 
         End With

@@ -35,6 +35,8 @@ Public Class FormVentas
 
     End Sub
     Dim idCliente As New ClientesClass
+    Dim idComprobante As New ComprobantesClass
+
 
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -43,8 +45,8 @@ Public Class FormVentas
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = Venta.id_cliente
 
-        txtIdComprobante.Text = comprobante.id
-
+        idComprobante.CargarComboComprobante(ComboComprobante)
+        ComboComprobante.SelectedValue = Venta.id_comprobante
 
 
         'txtDescripcion.Text = Venta.nombre
@@ -87,4 +89,7 @@ Public Class FormVentas
 
   
 
+    Private Sub ComboComprobante_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboComprobante.SelectedIndexChanged
+
+    End Sub
 End Class
