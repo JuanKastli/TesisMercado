@@ -86,5 +86,5 @@ Public Class FormVentas
     End Sub
 
   
-    
+
 End Class

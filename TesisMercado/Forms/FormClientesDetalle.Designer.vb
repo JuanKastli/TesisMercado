@@ -46,25 +46,25 @@ Partial Class FormClientesDetalle
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(125, 264)
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnCancelar.Location = New System.Drawing.Point(153, 264)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(87, 36)
-        Me.btnCancelar.TabIndex = 33
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
+        Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAceptar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(11, 264)
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAceptar.Location = New System.Drawing.Point(35, 264)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(87, 36)
-        Me.btnAceptar.TabIndex = 32
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
+        Me.btnAceptar.TabIndex = 8
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
@@ -84,8 +84,8 @@ Partial Class FormClientesDetalle
         Me.txtTelefono.Location = New System.Drawing.Point(76, 162)
         Me.txtTelefono.MaxLength = 20
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(145, 20)
-        Me.txtTelefono.TabIndex = 24
+        Me.txtTelefono.Size = New System.Drawing.Size(189, 20)
+        Me.txtTelefono.TabIndex = 4
         '
         'Label4
         '
@@ -103,8 +103,8 @@ Partial Class FormClientesDetalle
         Me.txtDireccion.Location = New System.Drawing.Point(76, 127)
         Me.txtDireccion.MaxLength = 20
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(145, 20)
-        Me.txtDireccion.TabIndex = 22
+        Me.txtDireccion.Size = New System.Drawing.Size(189, 20)
+        Me.txtDireccion.TabIndex = 3
         '
         'Label3
         '
@@ -122,8 +122,8 @@ Partial Class FormClientesDetalle
         Me.txtApellido.Location = New System.Drawing.Point(76, 91)
         Me.txtApellido.MaxLength = 20
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(145, 20)
-        Me.txtApellido.TabIndex = 21
+        Me.txtApellido.Size = New System.Drawing.Size(189, 20)
+        Me.txtApellido.TabIndex = 2
         Me.txtApellido.Tag = "*"
         '
         'Label2
@@ -142,8 +142,8 @@ Partial Class FormClientesDetalle
         Me.txtNombre.Location = New System.Drawing.Point(76, 56)
         Me.txtNombre.MaxLength = 20
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(145, 20)
-        Me.txtNombre.TabIndex = 19
+        Me.txtNombre.Size = New System.Drawing.Size(189, 20)
+        Me.txtNombre.TabIndex = 1
         Me.txtNombre.Tag = "*"
         '
         'Label1
@@ -163,7 +163,7 @@ Partial Class FormClientesDetalle
         Me.txtId.Location = New System.Drawing.Point(76, 19)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
-        Me.txtId.Size = New System.Drawing.Size(86, 20)
+        Me.txtId.Size = New System.Drawing.Size(113, 20)
         Me.txtId.TabIndex = 18
         '
         'ErrorProvider1
@@ -194,7 +194,7 @@ Partial Class FormClientesDetalle
         Me.RadioButton1.Location = New System.Drawing.Point(96, 228)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
-        Me.RadioButton1.TabIndex = 36
+        Me.RadioButton1.TabIndex = 6
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Si"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -205,7 +205,7 @@ Partial Class FormClientesDetalle
         Me.RadioButton2.Location = New System.Drawing.Point(150, 228)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
-        Me.RadioButton2.TabIndex = 37
+        Me.RadioButton2.TabIndex = 7
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "No"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -214,14 +214,14 @@ Partial Class FormClientesDetalle
         '
         Me.txtCuentaTotal.Location = New System.Drawing.Point(77, 201)
         Me.txtCuentaTotal.Name = "txtCuentaTotal"
-        Me.txtCuentaTotal.Size = New System.Drawing.Size(144, 20)
-        Me.txtCuentaTotal.TabIndex = 38
+        Me.txtCuentaTotal.Size = New System.Drawing.Size(112, 20)
+        Me.txtCuentaTotal.TabIndex = 5
         '
         'FormClientesDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(224, 310)
+        Me.ClientSize = New System.Drawing.Size(277, 310)
         Me.Controls.Add(Me.txtCuentaTotal)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
@@ -241,7 +241,7 @@ Partial Class FormClientesDetalle
         Me.Controls.Add(Me.txtId)
         Me.Name = "FormClientesDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormClientesDetalle"
+        Me.Text = "Clientes Detalle"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

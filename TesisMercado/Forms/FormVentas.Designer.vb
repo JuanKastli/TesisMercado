@@ -71,20 +71,20 @@ Partial Class FormVentas
         Me.btnEliminar.Location = New System.Drawing.Point(687, 287)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(97, 90)
-        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.TabIndex = 6
         Me.btnEliminar.Text = "Eliminar Producto"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCancelar.Location = New System.Drawing.Point(700, 481)
+        Me.btnCancelar.Location = New System.Drawing.Point(687, 475)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(92, 49)
-        Me.btnCancelar.TabIndex = 17
+        Me.btnCancelar.TabIndex = 1
         Me.btnCancelar.Text = "Cancelar Venta"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -132,15 +132,14 @@ Partial Class FormVentas
         '
         'btnAceptar
         '
-        Me.btnAceptar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnAceptar.Location = New System.Drawing.Point(279, 469)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(218, 61)
-        Me.btnAceptar.TabIndex = 33
+        Me.btnAceptar.TabIndex = 7
         Me.btnAceptar.Text = "Imprimir y Terminar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
@@ -167,7 +166,7 @@ Partial Class FormVentas
         Me.CmbCliente.Location = New System.Drawing.Point(275, 19)
         Me.CmbCliente.Name = "CmbCliente"
         Me.CmbCliente.Size = New System.Drawing.Size(104, 21)
-        Me.CmbCliente.TabIndex = 32
+        Me.CmbCliente.TabIndex = 2
         '
         'DateTimePicker2
         '
@@ -196,7 +195,7 @@ Partial Class FormVentas
         Me.ComboComprobante.Location = New System.Drawing.Point(167, 64)
         Me.ComboComprobante.Name = "ComboComprobante"
         Me.ComboComprobante.Size = New System.Drawing.Size(127, 21)
-        Me.ComboComprobante.TabIndex = 31
+        Me.ComboComprobante.TabIndex = 3
         '
         'Label17
         '
@@ -263,7 +262,7 @@ Partial Class FormVentas
         Me.btnAgregar.Location = New System.Drawing.Point(588, 49)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(192, 43)
-        Me.btnAgregar.TabIndex = 41
+        Me.btnAgregar.TabIndex = 5
         Me.btnAgregar.Text = "Agregar a la Lista"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
@@ -276,7 +275,7 @@ Partial Class FormVentas
         Me.btnBuscar.Location = New System.Drawing.Point(8, 38)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(134, 65)
-        Me.btnBuscar.TabIndex = 40
+        Me.btnBuscar.TabIndex = 4
         Me.btnBuscar.Text = "Buscar Producto"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
@@ -453,6 +452,7 @@ Partial Class FormVentas
         Me.Controls.Add(Me.btnCancelar)
         Me.Name = "FormVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Ventas"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

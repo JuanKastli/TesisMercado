@@ -125,7 +125,7 @@ Partial Class FormRubro
         Me.Controls.Add(Me.btnModificar)
         Me.Name = "FormRubro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormRubro"
+        Me.Text = "Rubros"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

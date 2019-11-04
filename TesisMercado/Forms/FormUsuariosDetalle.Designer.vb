@@ -225,7 +225,7 @@ Partial Class FormUsuariosDetalle
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormUsuariosDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormUsuariosDetalle"
+        Me.Text = "Usuarios Detalle"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

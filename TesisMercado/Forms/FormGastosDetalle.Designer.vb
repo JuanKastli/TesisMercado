@@ -149,7 +149,8 @@ Partial Class FormGastosDetalle
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Name = "FormGastosDetalle"
-        Me.Text = "FormGastosDetalle"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Gastos Detalle"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

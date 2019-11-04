@@ -35,24 +35,24 @@ Partial Class FormRubroDetalle
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancelar.Location = New System.Drawing.Point(166, 90)
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnCancelar.Location = New System.Drawing.Point(216, 104)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(87, 36)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 3
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnAceptar.Font = New System.Drawing.Font("Modern No. 20", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAceptar.Location = New System.Drawing.Point(16, 90)
+        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnAceptar.Location = New System.Drawing.Point(98, 104)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(87, 36)
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
         Me.btnAceptar.TabIndex = 2
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
@@ -92,7 +92,7 @@ Partial Class FormRubroDetalle
         '
         Me.txtNombreRubro.Location = New System.Drawing.Point(109, 47)
         Me.txtNombreRubro.Name = "txtNombreRubro"
-        Me.txtNombreRubro.Size = New System.Drawing.Size(145, 20)
+        Me.txtNombreRubro.Size = New System.Drawing.Size(219, 20)
         Me.txtNombreRubro.TabIndex = 1
         Me.txtNombreRubro.Tag = "*"
         '
@@ -104,7 +104,7 @@ Partial Class FormRubroDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(273, 141)
+        Me.ClientSize = New System.Drawing.Size(354, 154)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtNombreRubro)
         Me.Controls.Add(Me.Label1)
@@ -113,7 +113,7 @@ Partial Class FormRubroDetalle
         Me.Controls.Add(Me.btnAceptar)
         Me.Name = "FormRubroDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormRubroDetalle"
+        Me.Text = "Rubro Detalle"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

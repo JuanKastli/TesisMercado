@@ -133,7 +133,7 @@ Partial Class LstProductos
         Me.Location = New System.Drawing.Point(12, 37)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LstProductos"
-        Me.Text = "LstProductos"
+        Me.Text = "Lista Productos"
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

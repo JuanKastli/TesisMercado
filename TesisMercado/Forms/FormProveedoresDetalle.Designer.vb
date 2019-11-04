@@ -181,7 +181,7 @@ Partial Class FormProveedoresDetalle
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormProveedoresDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormProveedoresDetalle"
+        Me.Text = "Proveedores Detalle"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

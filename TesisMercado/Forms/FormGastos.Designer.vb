@@ -22,6 +22,7 @@ Partial Class FormGastos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker
         Me.dgvGastos = New System.Windows.Forms.DataGridView
         Me.Labelfecha = New System.Windows.Forms.Label
@@ -44,6 +45,9 @@ Partial Class FormGastos
         '
         'dgvGastos
         '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Green
+        Me.dgvGastos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvGastos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -145,7 +149,7 @@ Partial Class FormGastos
         Me.Controls.Add(Me.dgvGastos)
         Me.Controls.Add(Me.dtpFecha)
         Me.Name = "FormGastos"
-        Me.Text = "LstGastos"
+        Me.Text = "Lista Gastos"
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

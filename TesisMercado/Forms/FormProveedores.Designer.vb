@@ -127,7 +127,7 @@ Partial Class FormProveedores
         Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormProveedores"
-        Me.Text = "FormProveedores"
+        Me.Text = "Proveedores"
         CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

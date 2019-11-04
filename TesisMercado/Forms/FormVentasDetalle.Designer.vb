@@ -75,7 +75,7 @@ Partial Class FormVentasDetalle
         Me.Controls.Add(Me.btnAceptar)
         Me.Name = "FormVentasDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormVentasDetalle"
+        Me.Text = "Ventas Detalle"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

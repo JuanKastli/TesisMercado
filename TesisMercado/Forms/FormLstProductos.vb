@@ -40,4 +40,18 @@ Public Class FormLstProductos
 
     End Sub
 
+    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+        'For Each proveedor As DataGridViewRow In DataGridView1.SelectedRows
+        '    Dim proveedores As New ProveedoresClass
+
+        '    proveedores.Id = proveedor.Cells("id").Value
+        '    proveedores.Nombre = proveedor.Cells("nombre").Value
+        '    proveedores.Telefono = proveedor.Cells("telefono").Value
+        '    proveedores.Direccion = proveedor.Cells("direccion").Value
+        '    proveedores.Localidad = proveedor.Cells("localidad").Value
+
+        '    listaProveedores.Add(proveedores)
+        'Next
+        'Close()
+    End Sub
 End Class

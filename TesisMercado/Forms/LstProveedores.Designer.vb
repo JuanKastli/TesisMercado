@@ -85,7 +85,7 @@ Partial Class LstProveedores
         Me.Controls.Add(Me.btnAceptar)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LstProveedores"
-        Me.Text = "LstProveedores"
+        Me.Text = "Lista Proveedores"
         CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
