@@ -305,10 +305,8 @@ Partial Class FormVentas
         '
         'txtIdProducto
         '
-        Me.txtIdProducto.Enabled = False
         Me.txtIdProducto.Location = New System.Drawing.Point(416, 61)
         Me.txtIdProducto.Name = "txtIdProducto"
-        Me.txtIdProducto.ReadOnly = True
         Me.txtIdProducto.Size = New System.Drawing.Size(75, 20)
         Me.txtIdProducto.TabIndex = 25
         '
