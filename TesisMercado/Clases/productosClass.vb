@@ -102,7 +102,6 @@ Public Class productosClass
                     listado.Columns("id").Width = 50
                     'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
                 Else
                     listado.DataSource = Nothing
                 End If
@@ -116,6 +115,64 @@ Public Class productosClass
 
     End Sub
 
+    Public Sub ConsultarProductoDescripcion(ByVal listado As DataGridView, ByVal indicio As String)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("ConsultarProductoDescripcion", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@indicio", indicio)
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    listado.DataSource = objDataTable
+                    listado.Columns("id").Width = 50
+                    'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                Else
+                    listado.DataSource = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
+        End Try
+    End Sub
+
+    Public Sub ConsultarProductoCodigo(ByVal listado As DataGridView, ByVal indicio As Integer)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("ConsultarProductoCodigo", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@indicio", indicio)
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    listado.DataSource = objDataTable
+                    listado.Columns("id").Width = 50
+                    'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+                Else
+                    listado.DataSource = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
+        End Try
+    End Sub
 
     Public Function Agregar(ByVal Producto As productosClass) As Integer
         Try
@@ -197,6 +254,6 @@ Public Class productosClass
         End Try
 
     End Sub
-   
+
 
 End Class

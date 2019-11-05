@@ -74,18 +74,10 @@ Public Class FormVentas
     End Sub
 
     Public Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-
-
-        Dim FormLstProductos As New FormLstProductos
-
+        Dim FormLstProductos As New FormLstProductos(txtDescripcion.Text, txtIdProducto.Text)
         FormLstProductos.ShowDialog()
-
-
         txtIdProducto.Text = FormLstProductos.producto.Id
         txtDescripcion.Text = FormLstProductos.producto.nombre
-
-
-
     End Sub
   
 
@@ -116,9 +108,4 @@ Public Class FormVentas
 
     End Sub
 
-  
-
-    Private Sub ComboComprobante_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboComprobante.SelectedIndexChanged
-
-    End Sub
 End Class

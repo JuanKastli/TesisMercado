@@ -47,7 +47,7 @@
 
         Dim productosSeleccionados As New List(Of productosClass)
         Dim LstProductos As New LstProductos '(productosSeleccionados)
-        FormLstProductos.ShowDialog()
+        LstProductos.ShowDialog()
 
         ' ProveProdu.listaProductosProveedores(proveedor.Id, productosSeleccionados, dgvProveProdu)
     End Sub

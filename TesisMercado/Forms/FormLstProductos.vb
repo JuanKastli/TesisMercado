@@ -5,6 +5,8 @@ Public Class FormLstProductos
 
 
     Private producto_ As New productosClass
+    Private indicioTexto_ As String
+    Private indicioCodigo_ As Integer
 
     Public Property producto() As productosClass
         Get
@@ -15,13 +17,43 @@ Public Class FormLstProductos
         End Set
     End Property
 
+    Public Property indicioTexto() As String
+        Get
+            Return indicioTexto_
+        End Get
+        Set(ByVal value As String)
+            indicioTexto_ = value
+        End Set
+    End Property
+
+    Public Property indicioCodigo() As Integer
+        Get
+            Return indicioCodigo_
+        End Get
+        Set(ByVal value As Integer)
+            indicioCodigo_ = value
+        End Set
+    End Property
+
+    Public Sub New(ByVal indTexto, ByVal indCodigo)
+        InitializeComponent()
+        indicioTexto = indTexto
+        indicioCodigo = indCodigo
+    End Sub
+
     Dim Pro As New productosClass
 
     Private Sub FormLstProductos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
-        producto.ConsultarProducto(DataGridView1)
-
+        If indicioCodigo <> 0 Or indicioTexto <> "" Then
+            If indicioCodigo <> 0 Then
+                producto.ConsultarProductoCodigo(DataGridView1, indicioCodigo)
+            End If
+            If indicioTexto <> "" Then
+                producto.ConsultarProductoDescripcion(DataGridView1, indicioTexto)
+            End If
+        Else
+            producto.ConsultarProducto(DataGridView1)
+        End If
     End Sub
 
 
