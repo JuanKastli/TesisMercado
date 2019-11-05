@@ -2,8 +2,6 @@
 Imports System.Data.SqlClient
 
 Public Class FormLstProductos
-
-
     Private producto_ As New productosClass
     Private indicioTexto_ As String
     Private indicioCodigo_ As Integer
