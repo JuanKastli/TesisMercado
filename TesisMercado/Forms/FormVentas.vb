@@ -93,15 +93,18 @@ Public Class FormVentas
     Dim ventas As New ventaClass
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         For Each ventas As DataGridViewRow In DataGridView1.SelectedRows
-            Dim venta As New ventaClass
+            Dim venta As New VentaDetalles
 
             venta.Id = ventas.Cells("id").Value
-            'venta.nombre = ventas.Cells("nombre").Value
-            'venta.cantidad = ventas.Cells("cantidad").Value
-            pro.Precio = ventas.Cells("Precio").Value
+            venta.idProducto = ventas.Cells("idProducto").Value
+            venta.idventa = ventas.Cells("idventa").Value
+            venta.cantidad = ventas.Cells("cantidad").Value
+            venta.monto = ventas.Cells("monto").Value
+            venta.fecha = ventas.Cells("fecha").Value
+            venta.monto = ventas.Cells("tipo").Value
+            venta.paraBorrar = ventas.Cells("paraBorrar").Value
 
-
-
+       
             '    Dim productosSeleccionados As New List(Of productosClass)
             '    Dim lstProductos As New LstProductos(productosSeleccionados)
             '    lstProductos.ShowDialog()
