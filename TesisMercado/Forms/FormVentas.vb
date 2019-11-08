@@ -104,6 +104,10 @@ Public Class FormVentas
             venta.monto = ventas.Cells("tipo").Value
             venta.paraBorrar = ventas.Cells("paraBorrar").Value
 
+            'LstProductos.Add(pro)
+
+
+
        
             '    Dim productosSeleccionados As New List(Of productosClass)
             '    Dim lstProductos As New LstProductos(productosSeleccionados)
@@ -113,6 +117,7 @@ Public Class FormVentas
             '    .listaAlumnosMaterias(materia.id, alumnosSeleccionados, dgvAlumnosMateria)
         Next
 
+        Close()
 
 
     End Sub
