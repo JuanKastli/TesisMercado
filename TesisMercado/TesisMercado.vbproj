@@ -82,6 +82,7 @@
     <Compile Include="Clases\RubroClass.vb" />
     <Compile Include="Clases\UsuariosClass.vb" />
     <Compile Include="Clases\ventaClass.vb" />
+    <Compile Include="Clases\VentaDetalles.vb" />
     <Compile Include="Forms\FormCalcularVuelto.Designer.vb">
       <DependentUpon>FormCalcularVuelto.vb</DependentUpon>
     </Compile>

@@ -435,7 +435,7 @@ Partial Class FormVentas
         Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.Button1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Button1.Location = New System.Drawing.Point(551, 483)
+        Me.Button1.Location = New System.Drawing.Point(476, 483)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 39)
         Me.Button1.TabIndex = 57

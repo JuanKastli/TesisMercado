@@ -254,6 +254,39 @@ Public Class productosClass
         End Try
 
     End Sub
+    'Public Sub listaAlumnosMaterias(ByVal idMateria As Integer, ByVal listaAlumnos As List(Of Alumnos), ByVal lista As DataGridView)
+    '    Dim listaventa As New List(Of ventaClass)
+    '    For Each fila As DataGridViewRow In lista.Rows
+    '        Dim vent As New ventaClass
+    '        vent.Id = fila.Cells("id").Value
+    '        vent.idAlumno = fila.Cells("idAlumno").Value
+    '        vent.idMateria = fila.Cells("idMateria").Value
+    '        vent.nombreAlumno = fila.Cells("nombreAlumno").Value
+    '        vent.paraBorrar = fila.Cells("paraBorrar").Value
+    '        listaventa.Add(vent)
+    '    Next
 
+    '    For Each ven As ventaClass In listaventa
+    '        Dim ventadet As New ventaClass
+    '        ventadet.id = 0
+    '        ventadet.idDetalle = ven.Id
+    '        ventadet.nombreAlumno = ven.nombre
+    '        ventadet.idMateria = idMateria
+    '        ventadet.Add(ventaClass)
+    '    Next
+    '    lista.DataSource = listaventa
+
+    '    For Each fila As DataGridViewRow In lista.Rows
+    '        If fila.Cells("paraBorrar").Value = True Then
+    '            fila.Visible = False
+    '        End If
+    '    Next
+
+    '    lista.Columns("id").Width = 30
+    '    lista.Columns("idAlumno").Visible = False
+    '    lista.Columns("idMateria").Visible = False
+    '    lista.Columns("nombreAlumno").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+    '    lista.Columns("paraBorrar").Width = 30
+    'End Sub
 
 End Class
