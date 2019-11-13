@@ -51,7 +51,7 @@ Public Class FormVentas
     End Sub
     Dim idCliente As New ClientesClass
     Dim idComprobante As New ComprobantesClass
-
+    Dim listaDetalles As New List(Of VentaDetalles)
 
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -78,46 +78,33 @@ Public Class FormVentas
         FormLstProductos.ShowDialog()
         txtIdProducto.Text = FormLstProductos.producto.Id
         txtDescripcion.Text = FormLstProductos.producto.nombre
+        TxtPrecio.Text = FormLstProductos.producto.Precio
     End Sub
   
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvventadetalle.CellContentClick
 
 
-        txtCantDeProd.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString())
-        txtTotal.Text = Convert.ToString(DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString())
+        txtCantDeProd.Text = Convert.ToString(dgvventadetalle.Rows(e.RowIndex).Cells(0).Value.ToString())
+        txtTotal.Text = Convert.ToString(dgvventadetalle.Rows(e.RowIndex).Cells(1).Value.ToString())
 
 
     End Sub
 
     Dim ventas As New ventaClass
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        For Each ventas As DataGridViewRow In DataGridView1.SelectedRows
-            Dim venta As New VentaDetalles
 
-            venta.Id = ventas.Cells("id").Value
-            venta.idProducto = ventas.Cells("idProducto").Value
-            venta.idventa = ventas.Cells("idventa").Value
-            venta.cantidad = ventas.Cells("cantidad").Value
-            venta.monto = ventas.Cells("monto").Value
-            venta.fecha = ventas.Cells("fecha").Value
-            venta.monto = ventas.Cells("tipo").Value
-            venta.paraBorrar = ventas.Cells("paraBorrar").Value
-
-            'LstProductos.Add(pro)
+        Dim vendeta As New VentaDetalles
+        vendeta.idProducto = txtIdProducto.Text
+        vendeta.cantidad = txtCantidad.Text
+        vendeta.monto = TxtPrecio.Text
+        vendeta.producto = txtDescripcion.Text
+        vendeta.paraBorrar = False
+        vendeta.agregaraLista(vendeta, dgvventadetalle)
+        txtTotal.Text = vendeta.calcularTotal(dgvventadetalle)
 
 
 
-       
-            '    Dim productosSeleccionados As New List(Of productosClass)
-            '    Dim lstProductos As New LstProductos(productosSeleccionados)
-            '    lstProductos.ShowDialog()
-            '    Venta.lis()
-
-            '    .listaAlumnosMaterias(materia.id, alumnosSeleccionados, dgvAlumnosMateria)
-        Next
-
-        Close()
 
 
     End Sub
