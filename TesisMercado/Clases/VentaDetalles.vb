@@ -6,9 +6,9 @@ Public Class VentaDetalles
     Private idproducto_ As Integer
     Private idventa_ As Integer
     Private cantidad_ As Integer
-    Private monto_ As Decimal
-    Private fecha_ As DateTime
-    Private tipo_ As String
+    Private precio_ As Decimal
+    'Private fecha_ As DateTime
+    'Private tipo_ As String
     Private producto_ As String
     Private paraBorrar_ As Boolean
 
@@ -47,12 +47,12 @@ Public Class VentaDetalles
             cantidad_ = value
         End Set
     End Property
-    Public Property monto() As Decimal
+    Public Property precio() As Decimal
         Get
-            Return monto_
+            Return precio_
         End Get
         Set(ByVal value As Decimal)
-            monto_ = value
+            precio_ = value
         End Set
     End Property
 
@@ -65,23 +65,23 @@ Public Class VentaDetalles
         End Set
     End Property
 
-    Public Property fecha() As DateTime
-        Get
-            Return fecha_
-        End Get
-        Set(ByVal value As DateTime)
-            fecha_ = value
-        End Set
-    End Property
+    'Public Property fecha() As DateTime
+    '    Get
+    '        Return fecha_
+    '    End Get
+    '    Set(ByVal value As DateTime)
+    '        fecha_ = value
+    '    End Set
+    'End Property
 
-    Public Property tipo() As String
-        Get
-            Return tipo_
-        End Get
-        Set(ByVal value As String)
-            tipo_ = value
-        End Set
-    End Property
+    'Public Property tipo() As String
+    '    Get
+    '        Return tipo_
+    '    End Get
+    '    Set(ByVal value As String)
+    '        tipo_ = value
+    '    End Set
+    'End Property
 
     Public Property producto() As String
         Get
@@ -100,9 +100,9 @@ Public Class VentaDetalles
             vendeta.idProducto = fila.Cells("idproducto").Value
             vendeta.idventa = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
-            vendeta.monto = fila.Cells("monto").Value
-            vendeta.fecha = fila.Cells("fecha").Value
-            vendeta.tipo = fila.Cells("tipo").Value
+            vendeta.precio = fila.Cells("precio").Value
+            'vendeta.fecha = fila.Cells("fecha").Value
+            ' vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
             listavendeta.Add(vendeta)
 
@@ -114,10 +114,10 @@ Public Class VentaDetalles
             VentaDetalle.idProducto = prod.Id
             VentaDetalle.idventa = idventa
             VentaDetalle.cantidad = prod.cantidad
-            VentaDetalle.monto = monto
-            VentaDetalle.fecha = fecha
-            VentaDetalle.tipo = tipo
-            'VentaDetalle.paraBorrar = paraBorrar
+            VentaDetalle.precio = precio
+            'VentaDetalle.fecha = fecha
+            'VentaDetalle.tipo = tipo
+            VentaDetalle.paraBorrar = paraBorrar
 
             listavendeta.Add(VentaDetalle)
         Next
@@ -133,9 +133,9 @@ Public Class VentaDetalles
         lista.Columns("idProducto").Visible = False
         lista.Columns("idventa").Visible = False
         lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("monto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        lista.Columns("precio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        'lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        'lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         lista.Columns("paraBorrar").Width = 30
     End Sub
 
@@ -164,9 +164,9 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@idProducto", ventadetalle.idProducto)
             objComando.Parameters.AddWithValue("@idventa", ventadetalle.idventa)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            objComando.Parameters.AddWithValue("@monto", ventadetalle.monto)
-            objComando.Parameters.AddWithValue("@fecha", ventadetalle.fecha)
-            objComando.Parameters.AddWithValue("@tipo", ventadetalle.tipo)
+            objComando.Parameters.AddWithValue("@monto", ventadetalle.precio)
+            'objComando.Parameters.AddWithValue("@fecha", ventadetalle.fecha)
+            'objComando.Parameters.AddWithValue("@tipo", ventadetalle.tipo)
             
             objComando.ExecuteNonQuery()
         Catch ex As Exception
@@ -184,7 +184,7 @@ Public Class VentaDetalles
             Dim ventaDet As New VentaDetalles
             ventaDet.idProducto = detalle.Cells("idProducto").Value
             ventaDet.cantidad = detalle.Cells("cantidad").Value
-            ventaDet.monto = detalle.Cells("monto").Value
+            ventaDet.precio = detalle.Cells("precio").Value
             ventaDet.producto = detalle.Cells("producto").Value
             ventaDet.paraBorrar = detalle.Cells("paraBorrar").Value
             listaDetalle.Add(ventaDet)
@@ -228,9 +228,9 @@ Public Class VentaDetalles
                     lista.Columns("idProducto").Visible = False
                     lista.Columns("idventa").Visible = False
                     lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("monto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    lista.Columns("precio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    'lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    'lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("paraBorrar").Width = 30
                 Else
                     lista.DataSource = Nothing
