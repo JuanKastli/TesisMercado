@@ -46,7 +46,7 @@ Partial Class FormVentas
         Me.txtIdProducto = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtDescripcion = New System.Windows.Forms.TextBox
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.dgvventadetalle = New System.Windows.Forms.DataGridView
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtCantDeProd = New System.Windows.Forms.TextBox
         Me.Label12 = New System.Windows.Forms.Label
@@ -57,10 +57,12 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
+        Me.labelPrecio = New System.Windows.Forms.Label
+        Me.TxtPrecio = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvventadetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEliminar
@@ -233,6 +235,8 @@ Partial Class FormVentas
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox4.Controls.Add(Me.TxtPrecio)
+        Me.GroupBox4.Controls.Add(Me.labelPrecio)
         Me.GroupBox4.Controls.Add(Me.txtCantidad)
         Me.GroupBox4.Controls.Add(Me.btnAgregar)
         Me.GroupBox4.Controls.Add(Me.btnBuscar)
@@ -250,7 +254,7 @@ Partial Class FormVentas
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(549, 62)
+        Me.txtCantidad.Location = New System.Drawing.Point(566, 98)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(75, 20)
         Me.txtCantidad.TabIndex = 42
@@ -286,7 +290,7 @@ Partial Class FormVentas
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(497, 65)
+        Me.Label10.Location = New System.Drawing.Point(511, 101)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 13)
         Me.Label10.TabIndex = 38
@@ -297,15 +301,15 @@ Partial Class FormVentas
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(347, 64)
+        Me.Label6.Location = New System.Drawing.Point(390, 64)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 13)
+        Me.Label6.Size = New System.Drawing.Size(40, 13)
         Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Id Producto"
+        Me.Label6.Text = "Codigo"
         '
         'txtIdProducto
         '
-        Me.txtIdProducto.Location = New System.Drawing.Point(416, 61)
+        Me.txtIdProducto.Location = New System.Drawing.Point(436, 61)
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.Size = New System.Drawing.Size(75, 20)
         Me.txtIdProducto.TabIndex = 25
@@ -315,7 +319,7 @@ Partial Class FormVentas
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(148, 64)
+        Me.Label7.Location = New System.Drawing.Point(138, 64)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 13)
         Me.Label7.TabIndex = 27
@@ -323,22 +327,22 @@ Partial Class FormVentas
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(217, 61)
+        Me.txtDescripcion.Location = New System.Drawing.Point(207, 61)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(124, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(177, 20)
         Me.txtDescripcion.TabIndex = 26
         '
-        'DataGridView1
+        'dgvventadetalle
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvventadetalle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(4, 246)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(659, 182)
-        Me.DataGridView1.TabIndex = 40
+        Me.dgvventadetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvventadetalle.Location = New System.Drawing.Point(4, 246)
+        Me.dgvventadetalle.Name = "dgvventadetalle"
+        Me.dgvventadetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvventadetalle.Size = New System.Drawing.Size(659, 182)
+        Me.dgvventadetalle.TabIndex = 40
         '
         'Label1
         '
@@ -442,6 +446,22 @@ Partial Class FormVentas
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'labelPrecio
+        '
+        Me.labelPrecio.AutoSize = True
+        Me.labelPrecio.Location = New System.Drawing.Point(526, 64)
+        Me.labelPrecio.Name = "labelPrecio"
+        Me.labelPrecio.Size = New System.Drawing.Size(37, 13)
+        Me.labelPrecio.TabIndex = 43
+        Me.labelPrecio.Text = "Precio"
+        '
+        'TxtPrecio
+        '
+        Me.TxtPrecio.Location = New System.Drawing.Point(569, 61)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.Size = New System.Drawing.Size(72, 20)
+        Me.TxtPrecio.TabIndex = 44
+        '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -459,7 +479,7 @@ Partial Class FormVentas
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.txtCantDeProd)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvventadetalle)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnAceptar)
@@ -473,7 +493,7 @@ Partial Class FormVentas
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvventadetalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -497,7 +517,7 @@ Partial Class FormVentas
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvventadetalle As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtCantDeProd As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -513,4 +533,6 @@ Partial Class FormVentas
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TxtPrecio As System.Windows.Forms.TextBox
+    Friend WithEvents labelPrecio As System.Windows.Forms.Label
 End Class

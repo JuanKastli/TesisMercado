@@ -9,11 +9,8 @@ Public Class VentaDetalles
     Private monto_ As Decimal
     Private fecha_ As DateTime
     Private tipo_ As String
+    Private producto_ As String
     Private paraBorrar_ As Boolean
-
-
-
-
 
     Public Property id() As Integer
         Get
@@ -83,6 +80,15 @@ Public Class VentaDetalles
         End Get
         Set(ByVal value As String)
             tipo_ = value
+        End Set
+    End Property
+
+    Public Property producto() As String
+        Get
+            Return producto_
+        End Get
+        Set(ByVal value As String)
+            producto_ = value
         End Set
     End Property
 
@@ -169,9 +175,27 @@ Public Class VentaDetalles
             Cerrar()
         End Try
 
-
-
     End Sub
+
+    Public Sub agregaraLista(ByVal vendeta As VentaDetalles, ByVal lista As DataGridView)
+        Dim listaDetalle As New List(Of VentaDetalles)
+
+        For Each detalle As DataGridViewRow In lista.Rows
+            Dim ventaDet As New VentaDetalles
+            ventaDet.idProducto = detalle.Cells("idProducto").Value
+            ventaDet.cantidad = detalle.Cells("cantidad").Value
+            ventaDet.monto = detalle.Cells("monto").Value
+            ventaDet.producto = detalle.Cells("producto").Value
+            ventaDet.paraBorrar = detalle.Cells("paraBorrar").Value
+            listaDetalle.Add(ventaDet)
+        Next
+        listaDetalle.Add(vendeta)
+        lista.DataSource = listaDetalle
+    End Sub
+
+    Public Function calcularTotal(ByVal dgvventadetalle As DataGridView) As Decimal
+
+    End Function
 
     Public Sub Borrar(ByVal ventadetalle As VentaDetalles)
         Try
