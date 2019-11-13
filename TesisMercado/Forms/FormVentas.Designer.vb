@@ -38,6 +38,8 @@ Partial Class FormVentas
         Me.Label16 = New System.Windows.Forms.Label
         Me.txtIdComprobante = New System.Windows.Forms.TextBox
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.TxtPrecio = New System.Windows.Forms.TextBox
+        Me.labelPrecio = New System.Windows.Forms.Label
         Me.txtCantidad = New System.Windows.Forms.TextBox
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
@@ -57,8 +59,6 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.labelPrecio = New System.Windows.Forms.Label
-        Me.TxtPrecio = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -251,6 +251,22 @@ Partial Class FormVentas
         Me.GroupBox4.TabIndex = 39
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de Productos"
+        '
+        'TxtPrecio
+        '
+        Me.TxtPrecio.Location = New System.Drawing.Point(569, 61)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.Size = New System.Drawing.Size(72, 20)
+        Me.TxtPrecio.TabIndex = 44
+        '
+        'labelPrecio
+        '
+        Me.labelPrecio.AutoSize = True
+        Me.labelPrecio.Location = New System.Drawing.Point(526, 64)
+        Me.labelPrecio.Name = "labelPrecio"
+        Me.labelPrecio.Size = New System.Drawing.Size(37, 13)
+        Me.labelPrecio.TabIndex = 43
+        Me.labelPrecio.Text = "Precio"
         '
         'txtCantidad
         '
@@ -445,22 +461,6 @@ Partial Class FormVentas
         Me.Button1.TabIndex = 57
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'labelPrecio
-        '
-        Me.labelPrecio.AutoSize = True
-        Me.labelPrecio.Location = New System.Drawing.Point(526, 64)
-        Me.labelPrecio.Name = "labelPrecio"
-        Me.labelPrecio.Size = New System.Drawing.Size(37, 13)
-        Me.labelPrecio.TabIndex = 43
-        Me.labelPrecio.Text = "Precio"
-        '
-        'TxtPrecio
-        '
-        Me.TxtPrecio.Location = New System.Drawing.Point(569, 61)
-        Me.TxtPrecio.Name = "TxtPrecio"
-        Me.TxtPrecio.Size = New System.Drawing.Size(72, 20)
-        Me.TxtPrecio.TabIndex = 44
         '
         'FormVentas
         '
