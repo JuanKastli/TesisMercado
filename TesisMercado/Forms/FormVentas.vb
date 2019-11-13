@@ -104,9 +104,16 @@ Public Class FormVentas
         txtTotal.Text = vendeta.calcularTotal(dgvventadetalle)
 
 
-
-
-
     End Sub
 
+    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+        For Each vendeta As DataGridViewRow In dgvventadetalle.SelectedRows
+
+            vendeta.Cells("paraBorrar").Value = True
+            dgvventadetalle.CurrentCell = Nothing
+            vendeta.Visible = False
+
+        Next
+
+    End Sub
 End Class
