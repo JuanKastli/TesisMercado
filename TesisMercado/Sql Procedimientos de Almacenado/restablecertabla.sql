@@ -1,1 +1,0 @@
-DBCC CHECKIDENT ('tabla', RESEED, 0)
